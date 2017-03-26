@@ -24,6 +24,7 @@ div.output_prompt {
 
 div.input_area {
     margin: .2em 0.4em;
+    background-color: #272822;
 }
 
 table.dataframe {
