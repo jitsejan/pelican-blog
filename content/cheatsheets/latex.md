@@ -1,3 +1,12 @@
+Title: Latex cheatsheet
+Date: 2017-03-26 16:45
+Modified: 2017-03-26 16:45
+Category: Latex
+Tags: latex, cheatsheet
+Slug: latex-cheatsheet
+Authors: Jitse-Jan
+Summary: This is my Latex cheatsheet
+
 This is my [Latex](https://www.latex-project.org/) cheatsheet
 
 ## Add style to a code listing

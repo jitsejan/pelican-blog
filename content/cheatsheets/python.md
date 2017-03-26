@@ -1,3 +1,12 @@
+Title: Python cheatsheet
+Date: 2017-03-26 16:48
+Modified: 2017-03-26 16:48
+Category: python
+Tags: python, cheatsheet
+Slug: python-cheatsheet
+Authors: Jitse-Jan
+Summary: This is my Python cheatsheet
+
 This is my [Python](https://www.python.org/) cheatsheet
 
 ### Pretty print a dictionary

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="utf-8" />
+        <title>JJ's World - latex</title>
+        <link rel="stylesheet" href="/theme/css/main.css" />
+
+        <!--[if IE]>
+            <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="/">JJ's World </a></h1>
+                <nav><ul>
+                    <li><a href="/category/latex.html">Latex</a></li>
+                    <li><a href="/category/pandas.html">pandas</a></li>
+                    <li><a href="/category/posts.html">posts</a></li>
+                    <li><a href="/category/python.html">python</a></li>
+                    <li><a href="/category/splunk.html">splunk</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
+
+            <aside id="featured" class="body">
+                <article>
+                    <h1 class="entry-title"><a href="/latex-cheatsheet.html">Latex cheatsheet</a></h1>
+<footer class="post-info">
+        <abbr class="published" title="2017-03-26T16:45:00+02:00">
+                Published: Sun 26 March 2017
+        </abbr>
+		<br />
+        <abbr class="modified" title="2017-03-26T16:45:00+02:00">
+                Updated: Sun 26 March 2017
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/jitse-jan.html">Jitse-Jan</a>
+        </address>
+<p>In <a href="/category/latex.html">Latex</a>.</p>
+<p>tags: <a href="/tag/latex.html">latex</a> <a href="/tag/cheatsheet.html">cheatsheet</a> </p>
+</footer><!-- /.post-info --><p>This is my <a href="https://www.latex-project.org/">Latex</a> cheatsheet</p>
+<h2>Add style to a code listing</h2>
+<p><strong>styles.tex</strong></p>
+<div class="highlight"><pre><span></span><span class="k">\definecolor</span><span class="nb">{</span>dkgreen<span class="nb">}{</span>rgb<span class="nb">}{</span>0,0.6,0<span class="nb">}</span>
+<span class="k">\definecolor</span><span class="nb">{</span>gray<span class="nb">}{</span>rgb<span class="nb">}{</span>0.5,0.5,0.5<span class="nb">}</span>
+<span class="k">\definecolor</span><span class="nb">{</span>mauve<span class="nb">}{</span>rgb<span class="nb">}{</span>0.58,0,0.82<span class="nb">}</span>
+<span class="k">\definecolor</span><span class="nb">{</span>light-gray<span class="nb">}{</span>gray<span class="nb">}{</span>0.25<span class="nb">}</span>
+
+<span class="k">\usepackage</span><span class="nb">{</span>listings<span class="nb">}</span>
+
+<span class="k">\lstdefinestyle</span><span class="nb">{</span>java<span class="nb">}{</span>
+  language=Java,
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle=<span class="nb">{</span><span class="k">\footnotesize\ttfamily</span><span class="nb">}</span>,
+  numberstyle=<span class="nb">{</span><span class="k">\tiny</span><span class="nb">}</span>,
+  numbers=left,
+  keywordstyle=<span class="k">\color</span><span class="nb">{</span>blue<span class="nb">}</span>,
+  commentstyle=<span class="k">\color</span><span class="nb">{</span>dkgreen<span class="nb">}</span>,
+  stringstyle=<span class="k">\color</span><span class="nb">{</span>mauve<span class="nb">}</span>,
+  breaklines=true,
+  breakatwhitespace=true,
+  tabsize=3,
+<span class="nb">}</span>
+</pre></div>
+
+
+<p><strong>main.tex</strong></p>
+<div class="highlight"><pre><span></span><span class="k">\input</span><span class="nb">{</span>styles.tex<span class="nb">}</span>
+<span class="k">\lstinputlisting</span><span class="na">[style=Java, frame=single, caption={Hello world}, captionpos=b]</span><span class="nb">{</span>helloworld.java<span class="nb">}</span>
+</pre></div>
+
+
+<p>Bonus: rename the caption from <em>Listing</em> to <em>Code snippet</em> with the following:</p>
+<div class="highlight"><pre><span></span><span class="k">\renewcommand*\lstlistingname</span><span class="nb">{</span>Code snippet<span class="nb">}</span>
+</pre></div>
+
+
+<h2>Subfigures</h2>
+<div class="highlight"><pre><span></span><span class="k">\usepackage</span><span class="nb">{</span>graphicx<span class="nb">}</span>
+<span class="k">\usepackage</span><span class="nb">{</span>caption<span class="nb">}</span>
+<span class="k">\usepackage</span><span class="nb">{</span>subcaption<span class="nb">}</span>
+
+<span class="k">\begin</span><span class="nb">{</span>figure*<span class="nb">}</span>[h]
+    <span class="k">\centering</span>
+    <span class="k">\begin</span><span class="nb">{</span>subfigure<span class="nb">}</span>[t]<span class="nb">{</span>0.5<span class="k">\textwidth</span><span class="nb">}</span>
+        <span class="k">\centering</span>
+        <span class="k">\includegraphics</span><span class="na">[width=2.2in]</span><span class="nb">{</span>image<span class="nb">_</span>one.png<span class="nb">}</span>
+        <span class="k">\caption</span><span class="nb">{</span>Image one<span class="nb">}</span>
+    <span class="k">\end</span><span class="nb">{</span>subfigure<span class="nb">}</span><span class="c">%</span>
+    ~ 
+    <span class="k">\begin</span><span class="nb">{</span>subfigure<span class="nb">}</span>[t]<span class="nb">{</span>0.5<span class="k">\textwidth</span><span class="nb">}</span>
+        <span class="k">\centering</span>
+        <span class="k">\includegraphics</span><span class="na">[width=2.2in]</span><span class="nb">{</span>image<span class="nb">_</span>two.png<span class="nb">}</span>
+        <span class="k">\caption</span><span class="nb">{</span>Image two<span class="nb">}</span>
+    <span class="k">\end</span><span class="nb">{</span>subfigure<span class="nb">}</span>
+    <span class="k">\caption</span><span class="nb">{</span>These are two images<span class="nb">}</span>
+<span class="k">\end</span><span class="nb">{</span>figure*<span class="nb">}</span>
+</pre></div>                </article>
+            </aside><!-- /#featured -->
+        <section id="extras" class="body">
+                <div class="blogroll">
+                        <h2>links</h2>
+                        <ul>
+                            <li><a href="http://getpelican.com/">Pelican</a></li>
+                            <li><a href="http://python.org/">Python.org</a></li>
+                            <li><a href="http://jinja.pocoo.org/">Jinja2</a></li>
+                            <li><a href="#">You can modify those links in your config file</a></li>
+                        </ul>
+                </div><!-- /.blogroll -->
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+
+                            <li><a href="#">You can add links in your config file</a></li>
+                            <li><a href="#">Another social link</a></li>
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
+
+</body>
+</html>

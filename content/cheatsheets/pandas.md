@@ -1,3 +1,12 @@
+Title: Pandas cheatsheet
+Date: 2017-03-26 16:47
+Modified: 2017-03-26 16:47
+Category: pandas
+Tags: pandas, cheatsheet
+Slug: pandas-cheatsheet
+Authors: Jitse-Jan
+Summary: This is my Pandas cheatsheet
+
 This is my [Pandas](http://pandas.pydata.org) cheatsheet. 
 
 Note that I import pandas the 'standard' way:

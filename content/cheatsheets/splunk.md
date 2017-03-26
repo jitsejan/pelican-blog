@@ -1,3 +1,12 @@
+Title: Splunk cheatsheet
+Date: 2017-03-26 16:48
+Modified: 2017-03-26 16:48
+Category: splunk
+Tags: splunk, cheatsheet
+Slug: splunk-cheatsheet
+Authors: Jitse-Jan
+Summary: This is my Splunk cheatsheet
+
 This is my [Splunk](https://www.splunk.com/) cheatsheet.
 
 ### Replace single quote with double quote

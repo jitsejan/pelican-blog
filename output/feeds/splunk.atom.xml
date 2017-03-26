@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>JJ's World - splunk</title><link href="/" rel="alternate"></link><link href="/feeds/splunk.atom.xml" rel="self"></link><id>/</id><updated>2017-03-26T16:48:00+02:00</updated><entry><title>Splunk cheatsheet</title><link href="/splunk-cheatsheet.html" rel="alternate"></link><published>2017-03-26T16:48:00+02:00</published><updated>2017-03-26T16:48:00+02:00</updated><author><name>Jitse-Jan</name></author><id>tag:None,2017-03-26:/splunk-cheatsheet.html</id><summary type="html">&lt;p&gt;This is my Splunk cheatsheet&lt;/p&gt;</summary><content type="html">&lt;p&gt;This is my &lt;a href="https://www.splunk.com/"&gt;Splunk&lt;/a&gt; cheatsheet.&lt;/p&gt;
+&lt;h3&gt;Replace single quote with double quote&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;| rex mode=sed &amp;quot;s/\&amp;#39;/\&amp;quot;/g&amp;quot; field=myfield
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h3&gt;Extract JSON data from an JSON array&lt;/h3&gt;
+&lt;p&gt;The following will try to find ten matches for strings contained in curly brackets. Next it will be expanded to a multi value field so we can use &lt;em&gt;spath&lt;/em&gt; on each extracted field.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;| rex max_match=10 &amp;quot;(?&amp;lt;json_field&amp;gt;{[^}]+})&amp;quot; field=myjsonarrayfield
+| mvexpand json_field
+| spath input=json_field 
+| rename field_in_json_field AS field
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h3&gt;Drilldown of areachart&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nt"&gt;&amp;lt;drilldown&amp;gt;&lt;/span&gt;
+    &lt;span class="nt"&gt;&amp;lt;set&lt;/span&gt; &lt;span class="na"&gt;token=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;form.character&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;$click.name2$&lt;span class="nt"&gt;&amp;lt;/set&amp;gt;&lt;/span&gt;
+&lt;span class="nt"&gt;&amp;lt;/drilldown&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h3&gt;Create a range between limits&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;| eval range_field = mvrange(start, end, step) 
+| mvexpand range_field 
+| stats count by range_field
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h3&gt;Frequency of Splunk restarts&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;index=_internal &amp;quot;Splunkd starting&amp;quot; | timechart span=1d count(_raw) as Event
+&lt;/pre&gt;&lt;/div&gt;</content><category term="splunk"></category><category term="cheatsheet"></category></entry></feed>
