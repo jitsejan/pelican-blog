@@ -1,50 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-        <meta charset="utf-8" />
-        <title>Create big files with dd</title>
-        <link rel="stylesheet" href="/theme/css/main.css" />
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="author" content="Jitse-Jan">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+        <title>Create big files with dd | JJ's World</title>
 
-        <!--[if IE]>
-            <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-        <![endif]-->
-</head>
+        <link rel="alternate" type="application/atom+xml" title="JJ's World blog atom feed" href="/feeds/all.atom.xml" />
+        <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700' rel='stylesheet' type='text/css'>
 
-<body id="index" class="home">
-        <header id="banner" class="body">
-                <h1><a href="/">JJ's World </a></h1>
-                <nav><ul>
-                    <li><a href="/category/latex.html">Latex</a></li>
-                    <li><a href="/category/pandas.html">pandas</a></li>
-                    <li class="active"><a href="/category/posts.html">posts</a></li>
-                    <li><a href="/category/python.html">python</a></li>
-                    <li><a href="/category/splunk.html">splunk</a></li>
-                </ul></nav>
-        </header><!-- /#banner -->
-<section id="content" class="body">
-  <article>
-    <header>
-      <h1 class="entry-title">
-        <a href="/create-big-files-with-dd.html" rel="bookmark"
-           title="Permalink to Create big files with dd">Create big files with dd</a></h1>
-    </header>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/theme/css/pygments.css">
+        <link rel="stylesheet" href="/theme/css/main.css">
 
-    <div class="entry-content">
-<footer class="post-info">
-        <abbr class="published" title="2016-07-28T10:45:00+02:00">
-                Published: Thu 28 July 2016
-        </abbr>
-		<br />
-        <abbr class="modified" title="2017-03-26T16:57:00+02:00">
-                Updated: Sun 26 March 2017
-        </abbr>
+    </head>
 
-        <address class="vcard author">
-                By                         <a class="url fn" href="/author/jitse-jan.html">Jitse-Jan</a>
-        </address>
-<p>In <a href="/category/posts.html">posts</a>.</p>
-<p>tags: <a href="/tag/shell.html">shell</a> </p>
-</footer><!-- /.post-info -->      <p>Use dd in Unix to create files with a size of 2.7 GB.</p>
+    <body>
+        <header class="navbar navbar-static-top bs-docs-nav main-header">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="/" title="Home" class="title">JJ's World</a></li>
+                </div>
+                <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+                    <ul class="nav navbar-nav navbar-right">
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+<div class="container post">
+
+    <article>
+        <header>
+            <h1>Create big files with dd</h1>
+            <time datetime="article.date.isoformat()" pubdate>Thu 28 July 2016</time>
+        </header>
+
+        <div class="article_content">
+            <p>Use dd in Unix to create files with a size of 2.7 GB.</p>
 <div class="highlight"><pre><span></span><span class="ch">#!/bin/ksh</span>
 <span class="nv">dir</span><span class="o">=</span>/this/is/my/outputdir/
 <span class="nv">numGig</span><span class="o">=</span>2.7
@@ -55,37 +50,98 @@
    dd <span class="k">if</span><span class="o">=</span>/dev/urandom <span class="nv">of</span><span class="o">=</span>dummy_<span class="nv">$i</span>.xml <span class="nv">count</span><span class="o">=</span><span class="m">204800</span> <span class="nv">bs</span><span class="o">=</span><span class="nv">$factor</span>
 <span class="k">done</span>
 </pre></div>
-    </div><!-- /.entry-content -->
+        </div>
 
-  </article>
-</section>
-        <section id="extras" class="body">
-                <div class="blogroll">
-                        <h2>links</h2>
-                        <ul>
-                            <li><a href="http://getpelican.com/">Pelican</a></li>
-                            <li><a href="http://python.org/">Python.org</a></li>
-                            <li><a href="http://jinja.pocoo.org/">Jinja2</a></li>
-                            <li><a href="#">You can modify those links in your config file</a></li>
-                        </ul>
-                </div><!-- /.blogroll -->
-                <div class="social">
-                        <h2>social</h2>
-                        <ul>
+        <div class="meta">
+            <div>
+                    <a href="./tag/shell.html" class="tag">shell</a>
+            </div>
+            <div>
+                <a id="comments-button" class="comments_btn" href="#disqus_thread">Show comments</a>
+            </div>
+        </div>
+    </article>
+</div>
 
-                            <li><a href="#">You can add links in your config file</a></li>
-                            <li><a href="#">Another social link</a></li>
-                        </ul>
-                </div><!-- /.social -->
-        </section><!-- /#extras -->
+<script type="text/javascript">
+(function () {
+    'use strict';
 
-        <footer id="contentinfo" class="body">
-                <address id="about" class="vcard body">
-                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
-                </address><!-- /#about -->
+    // Global object
+    var App = {};
 
-                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
-        </footer><!-- /#contentinfo -->
+    // Create button
+    App.commentsButton = document.getElementById('comments-button');
 
-</body>
+    App.commentsButton.onclick = function () {
+        // Remove button action on click
+        App.commentsButton.onclick = function () {
+        }
+
+        // Create comments container
+        App.disqusContainer = document.createElement('div');
+        App.disqusContainer.setAttribute('id', 'disqus_thread');
+        // App.disqusContainer.setAttribute('class', 'container');
+
+        // Append container to body or div
+        // document.body.appendChild( App.disqusContainer );
+        var container = document.getElementsByClassName('container post')[0];
+        container.appendChild(App.disqusContainer);
+
+        // Your Disqus shortname
+        App.disqus_shortname = '';
+
+        // Embed Disqus
+        var dsq = document.createElement('script');
+
+        dsq.type = 'text/javascript';
+        dsq.async = true;
+        dsq.src = '//' + App.disqus_shortname + '.disqus.com/embed.js';
+
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+
+        window.scrollTo(0, dsq.offsetTop - 200);
+    };
+})();
+</script>
+
+        <style type="text/css">.text_cell .prompt {
+    display: none;
+}
+
+div.cell {
+    padding: 0;
+}
+
+div.text_cell_render {
+    padding: 0;
+}
+
+div.prompt {
+    font-size: 13px;
+}
+
+div.input_prompt {
+    padding: .7em 0.2em;
+}
+
+div.output_prompt {
+    padding: .4em .2em;
+}
+
+div.input_area {
+    margin: .2em 0.4em;
+}
+
+table.dataframe {
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    line-height: 20px;
+}
+
+table.dataframe th, td {
+    padding: 4px;
+    text-align: left;
+}</style>
+    </body>
 </html>

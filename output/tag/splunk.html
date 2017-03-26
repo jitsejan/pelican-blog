@@ -1,104 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-        <meta charset="utf-8" />
-        <title>JJ's World - splunk</title>
-        <link rel="stylesheet" href="/theme/css/main.css" />
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="author" content="Jitse-Jan">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+        <title>Archives | JJ's World</title>
 
-        <!--[if IE]>
-            <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-        <![endif]-->
-</head>
+        <link rel="alternate" type="application/atom+xml" title="JJ's World blog atom feed" href="/feeds/all.atom.xml" />
+        <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700' rel='stylesheet' type='text/css'>
 
-<body id="index" class="home">
-        <header id="banner" class="body">
-                <h1><a href="/">JJ's World </a></h1>
-                <nav><ul>
-                    <li><a href="/category/latex.html">Latex</a></li>
-                    <li><a href="/category/pandas.html">pandas</a></li>
-                    <li><a href="/category/posts.html">posts</a></li>
-                    <li><a href="/category/python.html">python</a></li>
-                    <li><a href="/category/splunk.html">splunk</a></li>
-                </ul></nav>
-        </header><!-- /#banner -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/theme/css/pygments.css">
+        <link rel="stylesheet" href="/theme/css/main.css">
 
-            <aside id="featured" class="body">
-                <article>
-                    <h1 class="entry-title"><a href="/splunk-cheatsheet.html">Splunk cheatsheet</a></h1>
-<footer class="post-info">
-        <abbr class="published" title="2017-03-26T16:48:00+02:00">
-                Published: Sun 26 March 2017
-        </abbr>
-		<br />
-        <abbr class="modified" title="2017-03-26T16:48:00+02:00">
-                Updated: Sun 26 March 2017
-        </abbr>
+    </head>
 
-        <address class="vcard author">
-                By                         <a class="url fn" href="/author/jitse-jan.html">Jitse-Jan</a>
-        </address>
-<p>In <a href="/category/splunk.html">splunk</a>.</p>
-<p>tags: <a href="/tag/splunk.html">splunk</a> <a href="/tag/cheatsheet.html">cheatsheet</a> </p>
-</footer><!-- /.post-info --><p>This is my <a href="https://www.splunk.com/">Splunk</a> cheatsheet.</p>
-<h3>Replace single quote with double quote</h3>
-<div class="highlight"><pre><span></span>| rex mode=sed &quot;s/\&#39;/\&quot;/g&quot; field=myfield
-</pre></div>
+    <body>
+        <header class="navbar navbar-static-top bs-docs-nav main-header">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="/" title="Home" class="title">JJ's World</a></li>
+                </div>
+                <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+                    <ul class="nav navbar-nav navbar-right">
+                    </ul>
+                </nav>
+            </div>
+        </header>
 
+<div class="container list">
+    <article>
+        <h1 style="margin-bottom: 30px;">Tag: splunk</h1>
 
-<h3>Extract JSON data from an JSON array</h3>
-<p>The following will try to find ten matches for strings contained in curly brackets. Next it will be expanded to a multi value field so we can use <em>spath</em> on each extracted field.</p>
-<div class="highlight"><pre><span></span>| rex max_match=10 &quot;(?&lt;json_field&gt;{[^}]+})&quot; field=myjsonarrayfield
-| mvexpand json_field
-| spath input=json_field 
-| rename field_in_json_field AS field
-</pre></div>
+        <ul class="double-list">
+            <li>
+                <a href='/splunk-cheatsheet.html'>
+                    <h2>Splunk cheatsheet</h2>
+                    <span>26.03.2017</span>
+                </a>
+            </li>
+        </ul>
+    </article>
+</div>
+        <style type="text/css">.text_cell .prompt {
+    display: none;
+}
 
+div.cell {
+    padding: 0;
+}
 
-<h3>Drilldown of areachart</h3>
-<div class="highlight"><pre><span></span><span class="nt">&lt;drilldown&gt;</span>
-    <span class="nt">&lt;set</span> <span class="na">token=</span><span class="s">&quot;form.character&quot;</span><span class="nt">&gt;</span>$click.name2$<span class="nt">&lt;/set&gt;</span>
-<span class="nt">&lt;/drilldown&gt;</span>
-</pre></div>
+div.text_cell_render {
+    padding: 0;
+}
 
+div.prompt {
+    font-size: 13px;
+}
 
-<h3>Create a range between limits</h3>
-<div class="highlight"><pre><span></span>| eval range_field = mvrange(start, end, step) 
-| mvexpand range_field 
-| stats count by range_field
-</pre></div>
+div.input_prompt {
+    padding: .7em 0.2em;
+}
 
+div.output_prompt {
+    padding: .4em .2em;
+}
 
-<h3>Frequency of Splunk restarts</h3>
-<div class="highlight"><pre><span></span>index=_internal &quot;Splunkd starting&quot; | timechart span=1d count(_raw) as Event
-</pre></div>                </article>
-            </aside><!-- /#featured -->
-        <section id="extras" class="body">
-                <div class="blogroll">
-                        <h2>links</h2>
-                        <ul>
-                            <li><a href="http://getpelican.com/">Pelican</a></li>
-                            <li><a href="http://python.org/">Python.org</a></li>
-                            <li><a href="http://jinja.pocoo.org/">Jinja2</a></li>
-                            <li><a href="#">You can modify those links in your config file</a></li>
-                        </ul>
-                </div><!-- /.blogroll -->
-                <div class="social">
-                        <h2>social</h2>
-                        <ul>
+div.input_area {
+    margin: .2em 0.4em;
+}
 
-                            <li><a href="#">You can add links in your config file</a></li>
-                            <li><a href="#">Another social link</a></li>
-                        </ul>
-                </div><!-- /.social -->
-        </section><!-- /#extras -->
+table.dataframe {
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    line-height: 20px;
+}
 
-        <footer id="contentinfo" class="body">
-                <address id="about" class="vcard body">
-                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
-                </address><!-- /#about -->
-
-                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
-        </footer><!-- /#contentinfo -->
-
-</body>
+table.dataframe th, td {
+    padding: 4px;
+    text-align: left;
+}</style>
+    </body>
 </html>

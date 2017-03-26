@@ -1,115 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-        <meta charset="utf-8" />
-        <title>JJ's World - shell</title>
-        <link rel="stylesheet" href="/theme/css/main.css" />
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="author" content="Jitse-Jan">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+        <title>Archives | JJ's World</title>
 
-        <!--[if IE]>
-            <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-        <![endif]-->
-</head>
+        <link rel="alternate" type="application/atom+xml" title="JJ's World blog atom feed" href="/feeds/all.atom.xml" />
+        <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700' rel='stylesheet' type='text/css'>
 
-<body id="index" class="home">
-        <header id="banner" class="body">
-                <h1><a href="/">JJ's World </a></h1>
-                <nav><ul>
-                    <li><a href="/category/latex.html">Latex</a></li>
-                    <li><a href="/category/pandas.html">pandas</a></li>
-                    <li><a href="/category/posts.html">posts</a></li>
-                    <li><a href="/category/python.html">python</a></li>
-                    <li><a href="/category/splunk.html">splunk</a></li>
-                </ul></nav>
-        </header><!-- /#banner -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/theme/css/pygments.css">
+        <link rel="stylesheet" href="/theme/css/main.css">
 
-            <aside id="featured" class="body">
-                <article>
-                    <h1 class="entry-title"><a href="/create-big-files-with-dd.html">Create big files with dd</a></h1>
-<footer class="post-info">
-        <abbr class="published" title="2016-07-28T10:45:00+02:00">
-                Published: Thu 28 July 2016
-        </abbr>
-		<br />
-        <abbr class="modified" title="2017-03-26T16:57:00+02:00">
-                Updated: Sun 26 March 2017
-        </abbr>
+    </head>
 
-        <address class="vcard author">
-                By                         <a class="url fn" href="/author/jitse-jan.html">Jitse-Jan</a>
-        </address>
-<p>In <a href="/category/posts.html">posts</a>.</p>
-<p>tags: <a href="/tag/shell.html">shell</a> </p>
-</footer><!-- /.post-info --><p>Use dd in Unix to create files with a size of 2.7 GB.</p>
-<div class="highlight"><pre><span></span><span class="ch">#!/bin/ksh</span>
-<span class="nv">dir</span><span class="o">=</span>/this/is/my/outputdir/
-<span class="nv">numGig</span><span class="o">=</span>2.7
-<span class="nv">factor</span><span class="o">=</span>1024
-<span class="nv">memLimit</span><span class="o">=</span><span class="k">$(</span>expr <span class="nv">$numGig</span>*<span class="nv">$factor</span>*<span class="nv">$factor</span>*<span class="nv">$factor</span> <span class="p">|</span> bc<span class="k">)</span>
-<span class="nb">cd</span> <span class="nv">$dir</span>
-<span class="k">for</span> i in <span class="m">1</span> <span class="m">2</span> <span class="m">3</span> <span class="m">4</span> <span class="m">5</span> <span class="m">6</span> <span class="m">7</span> <span class="m">8</span> <span class="m">9</span> <span class="m">10</span> <span class="m">11</span> <span class="m">12</span> <span class="m">13</span> <span class="m">14</span> <span class="p">;</span> <span class="k">do</span>
-   dd <span class="k">if</span><span class="o">=</span>/dev/urandom <span class="nv">of</span><span class="o">=</span>dummy_<span class="nv">$i</span>.xml <span class="nv">count</span><span class="o">=</span><span class="m">204800</span> <span class="nv">bs</span><span class="o">=</span><span class="nv">$factor</span>
-<span class="k">done</span>
-</pre></div>                </article>
-            </aside><!-- /#featured -->
-                <section id="content" class="body">
-                    <h1>Other articles</h1>
-                    <hr />
-                    <ol id="posts-list" class="hfeed">
+    <body>
+        <header class="navbar navbar-static-top bs-docs-nav main-header">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="/" title="Home" class="title">JJ's World</a></li>
+                </div>
+                <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+                    <ul class="nav navbar-nav navbar-right">
+                    </ul>
+                </nav>
+            </div>
+        </header>
 
-            <li><article class="hentry">
-                <header>
-                    <h1><a href="/most-used-history-command.html" rel="bookmark"
-                           title="Permalink to Find most used history command">Find most used history command</a></h1>
-                </header>
+<div class="container list">
+    <article>
+        <h1 style="margin-bottom: 30px;">Tag: shell</h1>
 
-                <div class="entry-content">
-<footer class="post-info">
-        <abbr class="published" title="2016-07-27T16:55:00+02:00">
-                Published: Wed 27 July 2016
-        </abbr>
-		<br />
-        <abbr class="modified" title="2017-03-26T16:56:00+02:00">
-                Updated: Sun 26 March 2017
-        </abbr>
+        <ul class="double-list">
+            <li>
+                <a href='/create-big-files-with-dd.html'>
+                    <h2>Create big files with dd</h2>
+                    <span>28.07.2016</span>
+                </a>
+            </li>
+            <li>
+                <a href='/most-used-history-command.html'>
+                    <h2>Find most used history command</h2>
+                    <span>27.07.2016</span>
+                </a>
+            </li>
+        </ul>
+    </article>
+</div>
+        <style type="text/css">.text_cell .prompt {
+    display: none;
+}
 
-        <address class="vcard author">
-                By                         <a class="url fn" href="/author/jitse-jan.html">Jitse-Jan</a>
-        </address>
-<p>In <a href="/category/posts.html">posts</a>.</p>
-<p>tags: <a href="/tag/shell.html">shell</a> </p>
-</footer><!-- /.post-info -->                <p>Find most used history command</p>
-                <a class="readmore" href="/most-used-history-command.html">read more</a>
-                </div><!-- /.entry-content -->
-            </article></li>
-                </ol><!-- /#posts-list -->
-                </section><!-- /#content -->
-        <section id="extras" class="body">
-                <div class="blogroll">
-                        <h2>links</h2>
-                        <ul>
-                            <li><a href="http://getpelican.com/">Pelican</a></li>
-                            <li><a href="http://python.org/">Python.org</a></li>
-                            <li><a href="http://jinja.pocoo.org/">Jinja2</a></li>
-                            <li><a href="#">You can modify those links in your config file</a></li>
-                        </ul>
-                </div><!-- /.blogroll -->
-                <div class="social">
-                        <h2>social</h2>
-                        <ul>
+div.cell {
+    padding: 0;
+}
 
-                            <li><a href="#">You can add links in your config file</a></li>
-                            <li><a href="#">Another social link</a></li>
-                        </ul>
-                </div><!-- /.social -->
-        </section><!-- /#extras -->
+div.text_cell_render {
+    padding: 0;
+}
 
-        <footer id="contentinfo" class="body">
-                <address id="about" class="vcard body">
-                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
-                </address><!-- /#about -->
+div.prompt {
+    font-size: 13px;
+}
 
-                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
-        </footer><!-- /#contentinfo -->
+div.input_prompt {
+    padding: .7em 0.2em;
+}
 
-</body>
+div.output_prompt {
+    padding: .4em .2em;
+}
+
+div.input_area {
+    margin: .2em 0.4em;
+}
+
+table.dataframe {
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    line-height: 20px;
+}
+
+table.dataframe th, td {
+    padding: 4px;
+    text-align: left;
+}</style>
+    </body>
 </html>

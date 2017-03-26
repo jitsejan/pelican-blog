@@ -1,314 +1,228 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-        <meta charset="utf-8" />
-        <title>JJ's World - Jitse-Jan</title>
-        <link rel="stylesheet" href="/theme/css/main.css" />
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="author" content="Jitse-Jan">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+        <title>JJ's World - Articles by Jitse-Jan | JJ's World</title>
 
-        <!--[if IE]>
-            <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-        <![endif]-->
-</head>
+        <link rel="alternate" type="application/atom+xml" title="JJ's World blog atom feed" href="/feeds/all.atom.xml" />
+        <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700' rel='stylesheet' type='text/css'>
 
-<body id="index" class="home">
-        <header id="banner" class="body">
-                <h1><a href="/">JJ's World </a></h1>
-                <nav><ul>
-                    <li><a href="/category/latex.html">Latex</a></li>
-                    <li><a href="/category/pandas.html">pandas</a></li>
-                    <li><a href="/category/posts.html">posts</a></li>
-                    <li><a href="/category/python.html">python</a></li>
-                    <li><a href="/category/splunk.html">splunk</a></li>
-                </ul></nav>
-        </header><!-- /#banner -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/theme/css/pygments.css">
+        <link rel="stylesheet" href="/theme/css/main.css">
 
-            <aside id="featured" class="body">
-                <article>
-                    <h1 class="entry-title"><a href="/python-cheatsheet.html">Python cheatsheet</a></h1>
-<footer class="post-info">
-        <abbr class="published" title="2017-03-26T16:48:00+02:00">
-                Published: Sun 26 March 2017
-        </abbr>
-		<br />
-        <abbr class="modified" title="2017-03-26T16:48:00+02:00">
-                Updated: Sun 26 March 2017
-        </abbr>
+    </head>
 
-        <address class="vcard author">
-                By                         <a class="url fn" href="/author/jitse-jan.html">Jitse-Jan</a>
-        </address>
-<p>In <a href="/category/python.html">python</a>.</p>
-<p>tags: <a href="/tag/python.html">python</a> <a href="/tag/cheatsheet.html">cheatsheet</a> </p>
-</footer><!-- /.post-info --><p>This is my <a href="https://www.python.org/">Python</a> cheatsheet</p>
-<h3>Pretty print a dictionary</h3>
-<div class="highlight"><pre><span></span><span class="k">print</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">characters</span><span class="p">[:</span><span class="mi">1</span><span class="p">],</span> <span class="n">indent</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
-</pre></div>
+    <body>
+        <header class="navbar navbar-static-top bs-docs-nav main-header">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="/" title="Home" class="title">JJ's World</a></li>
+                </div>
+                <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+                    <ul class="nav navbar-nav navbar-right">
+                    </ul>
+                </nav>
+            </div>
+        </header>
 
+<div class="container index">
 
-<h3>Find index of item in dictionary</h3>
-<div class="highlight"><pre><span></span><span class="n">index</span> <span class="o">=</span> <span class="nb">next</span><span class="p">(</span><span class="n">index</span> <span class="k">for</span> <span class="p">(</span><span class="n">index</span><span class="p">,</span> <span class="n">d</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">characters</span><span class="p">)</span> <span class="k">if</span> <span class="n">d</span><span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;Mario&#39;</span><span class="p">)</span>
-</pre></div>
+  <article>
+    <header>
+      <h2><a href="../python-cheatsheet.html">Python cheatsheet</a></h2>
+      <time datetime="" title="2017-03-26T16:48:00+02:00" pubdate>Sun 26 March 2017</time>
+    </header>
 
+    <div class="article_content">
+      <p>This is my Python cheatsheet</p>
+    </div>
 
-<h2>Databases</h2>
-<h3>Retrieve from Postgresql</h3>
-<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">psycopg2</span>
-<span class="n">connnection</span> <span class="o">=</span> <span class="n">psycopg2</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">database</span><span class="o">=</span><span class="s2">&quot;character_db&quot;</span><span class="p">,</span>
-                               <span class="n">user</span><span class="o">=</span><span class="s2">&quot;character_user&quot;</span><span class="p">,</span>
-                               <span class="n">password</span><span class="o">=</span><span class="s2">&quot;character1234&quot;</span><span class="p">,</span>
-                               <span class="n">host</span><span class="o">=</span><span class="s2">&quot;localhost&quot;</span><span class="p">,</span>
-                               <span class="n">port</span><span class="o">=</span><span class="s1">&#39;5433&#39;</span><span class="p">)</span>
-<span class="n">cursor</span> <span class="o">=</span> <span class="n">connnection</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
-<span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;SELECT * FROM </span><span class="se">\&quot;</span><span class="s2">characters</span><span class="se">\&quot;</span><span class="s2">&quot;</span><span class="p">)</span>
-<span class="n">characters</span> <span class="o">=</span> <span class="n">cursor</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span>
-</pre></div>
+    <div class="meta">
+      <div>
+        <a href="../python-cheatsheet.html" class="read_more">Read more &#8594;</a>
+      </div>
 
+      <div>
+            <a href="../tag/python.html" class="tag">python</a>
+            <a href="../tag/cheatsheet.html" class="tag">cheatsheet</a>
+      </div>
 
-<h3>Dictionary to CSV</h3>
-<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">csv</span>
-<span class="k">def</span> <span class="nf">write_dictionary_to_csv</span><span class="p">(</span><span class="n">o_file</span><span class="p">,</span> <span class="n">d</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot; Write dictionary to output file &quot;&quot;&quot;</span>
-    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">o_file</span><span class="p">,</span> <span class="s1">&#39;wb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">csvfile</span><span class="p">:</span>
-        <span class="n">outputwriter</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">writer</span><span class="p">(</span><span class="n">csvfile</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s1">&#39;;&#39;</span><span class="p">,</span> <span class="n">quoting</span><span class="o">=</span><span class="n">csv</span><span class="o">.</span><span class="n">QUOTE_MINIMAL</span><span class="p">)</span>
-        <span class="n">outputwriter</span><span class="o">.</span><span class="n">writerow</span><span class="p">(</span><span class="n">d</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
-        <span class="n">outputwriter</span><span class="o">.</span><span class="n">writerows</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="o">*</span><span class="n">d</span><span class="o">.</span><span class="n">values</span><span class="p">()))</span>
+    </div>
 
-<span class="n">output_file</span> <span class="o">=</span> <span class="s1">&#39;output.csv&#39;</span>
-<span class="n">write_dictionary_to_csv</span><span class="p">(</span><span class="n">output_file</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span>
-</pre></div>
+  </article>
+  <div class="separator"></div>
+  <article>
+    <header>
+      <h2><a href="../splunk-cheatsheet.html">Splunk cheatsheet</a></h2>
+      <time datetime="" title="2017-03-26T16:48:00+02:00" pubdate>Sun 26 March 2017</time>
+    </header>
 
+    <div class="article_content">
+      <p>This is my Splunk cheatsheet</p>
+    </div>
 
-<h2>Web crawling</h2>
-<h3>Use urllib2 to retrieve page content</h3>
-<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">urllib2</span>
-<span class="n">req</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">Request</span><span class="p">(</span><span class="s1">&#39;http://www.mariowiki.com&#39;</span><span class="p">)</span>
-<span class="n">data</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">req</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
-</pre></div>
+    <div class="meta">
+      <div>
+        <a href="../splunk-cheatsheet.html" class="read_more">Read more &#8594;</a>
+      </div>
 
+      <div>
+            <a href="../tag/splunk.html" class="tag">splunk</a>
+            <a href="../tag/cheatsheet.html" class="tag">cheatsheet</a>
+      </div>
 
-<h3>Set header for urllib2</h3>
-<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">urllib2</span>
-<span class="c1"># Header to request a page with NL as country</span>
-<span class="n">HEADER</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Accept-Language&#39;</span><span class="p">:</span> <span class="s1">&#39;nl-NL&#39;</span><span class="p">,</span>
-       <span class="s1">&#39;User-Agent&#39;</span><span class="p">:</span> <span class="s2">&quot;&quot;&quot;Mozilla/5.0 (Windows; U;</span>
-<span class="s2">                                    Windows NT 6.1;</span>
-<span class="s2">                                    nl-NL;</span>
-<span class="s2">                                    rv:1.9.1.5)</span>
-<span class="s2">                       Gecko/20091102 Firefox/3.5.5 (.NET CLR 3.5.30729);</span>
-<span class="s2">                       nl-NL&quot;&quot;&quot;</span><span class="p">}</span>
-<span class="n">req</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">Request</span><span class="p">(</span><span class="s1">&#39;http://www.mariowiki.com&#39;</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">HEADER</span><span class="p">)</span>
-<span class="n">data</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">req</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
-</pre></div>
+    </div>
 
+  </article>
+  <div class="separator"></div>
+  <article>
+    <header>
+      <h2><a href="../pandas-cheatsheet.html">Pandas cheatsheet</a></h2>
+      <time datetime="" title="2017-03-26T16:47:00+02:00" pubdate>Sun 26 March 2017</time>
+    </header>
 
-<h3>Use requests to retrieve page content</h3>
-<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span>
-<span class="n">resp</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;http://www.mariowiki.com&#39;</span><span class="p">)</span>
-<span class="n">data</span> <span class="o">=</span> <span class="n">resp</span><span class="o">.</span><span class="n">content</span>
-</pre></div>
+    <div class="article_content">
+      <p>This is my Pandas cheatsheet</p>
+    </div>
 
+    <div class="meta">
+      <div>
+        <a href="../pandas-cheatsheet.html" class="read_more">Read more &#8594;</a>
+      </div>
 
-<h3>Use Selenium to retrieve page content</h3>
-<div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">selenium</span> <span class="kn">import</span> <span class="n">webdriver</span>
-<span class="n">browser</span> <span class="o">=</span> <span class="n">webdriver</span><span class="o">.</span><span class="n">Chrome</span><span class="p">()</span>
-<span class="n">browser</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;http://www.mariowiki.com&#39;</span><span class="p">)</span>
-<span class="n">data</span> <span class="o">=</span> <span class="n">browser</span><span class="o">.</span><span class="n">page_source</span>
-<span class="n">browser</span><span class="o">.</span><span class="n">quit</span><span class="p">()</span>
-</pre></div>
+      <div>
+            <a href="../tag/pandas.html" class="tag">pandas</a>
+            <a href="../tag/cheatsheet.html" class="tag">cheatsheet</a>
+      </div>
 
+    </div>
 
-<h3>Scroll down in Selenium</h3>
-<div class="highlight"><pre><span></span><span class="n">browser</span><span class="o">.</span><span class="n">execute_script</span><span class="p">(</span><span class="s2">&quot;window.scrollTo(0, document.body.scrollHeight);&quot;</span><span class="p">)</span>
-</pre></div>
+  </article>
+  <div class="separator"></div>
+  <article>
+    <header>
+      <h2><a href="../latex-cheatsheet.html">Latex cheatsheet</a></h2>
+      <time datetime="" title="2017-03-26T16:45:00+02:00" pubdate>Sun 26 March 2017</time>
+    </header>
 
+    <div class="article_content">
+      <p>This is my Latex cheatsheet</p>
+    </div>
 
-<h3>Find an element and click in Selenium</h3>
-<p>By CSS selector:</p>
-<div class="highlight"><pre><span></span><span class="n">browser</span><span class="o">.</span><span class="n">find_element_by_css_selector</span><span class="p">(</span><span class="s1">&#39;#clickme&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">click</span><span class="p">()</span>
-</pre></div>
+    <div class="meta">
+      <div>
+        <a href="../latex-cheatsheet.html" class="read_more">Read more &#8594;</a>
+      </div>
 
+      <div>
+            <a href="../tag/latex.html" class="tag">latex</a>
+            <a href="../tag/cheatsheet.html" class="tag">cheatsheet</a>
+      </div>
 
-<p>By attribute:</p>
-<div class="highlight"><pre><span></span><span class="n">browser</span><span class="o">.</span><span class="n">find_element_by_xpath</span><span class="p">(</span><span class="s1">&#39;//input[@title=&quot;Open page&quot;]&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">click</span><span class="p">()</span>
-</pre></div>
+    </div>
 
+  </article>
+  <div class="separator"></div>
+  <article>
+    <header>
+      <h2><a href="../create-big-files-with-dd.html">Create big files with dd</a></h2>
+      <time datetime="" title="2016-07-28T10:45:00+02:00" pubdate>Thu 28 July 2016</time>
+    </header>
 
-<h3>Make a list of links with cssselect</h3>
-<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">lxml.html</span>
-<span class="n">tree</span> <span class="o">=</span> <span class="n">lxml</span><span class="o">.</span><span class="n">html</span><span class="o">.</span><span class="n">fromstring</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
-<span class="n">links</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;http://www.mariowiki.com&#39;</span><span class="o">+</span><span class="n">link</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;href&#39;</span><span class="p">)</span> <span class="k">for</span> <span class="n">link</span> <span class="ow">in</span> <span class="n">tree</span><span class="o">.</span><span class="n">cssselect</span><span class="p">(</span><span class="s1">&#39;div[role*=</span><span class="se">\&#39;</span><span class="s1">navigation</span><span class="se">\&#39;</span><span class="s1">] a&#39;</span><span class="p">)]</span>
-</pre></div>
+    <div class="article_content">
+      <p>Create big files with dd</p>
+    </div>
 
+    <div class="meta">
+      <div>
+        <a href="../create-big-files-with-dd.html" class="read_more">Read more &#8594;</a>
+      </div>
 
-<h3>Switch between tabs with Selenium</h3>
-<div class="highlight"><pre><span></span><span class="n">browser</span><span class="o">.</span><span class="n">switch_to</span><span class="o">.</span><span class="n">window</span><span class="p">(</span><span class="n">window_name</span><span class="o">=</span><span class="n">browser</span><span class="o">.</span><span class="n">window_handles</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
-<span class="n">browser</span><span class="o">.</span><span class="n">quit</span><span class="p">()</span>
-<span class="n">browser</span><span class="o">.</span><span class="n">switch_to</span><span class="o">.</span><span class="n">window</span><span class="p">(</span><span class="n">window_name</span><span class="o">=</span><span class="n">browser</span><span class="o">.</span><span class="n">window_handles</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
-</pre></div>                </article>
-            </aside><!-- /#featured -->
-                <section id="content" class="body">
-                    <h1>Other articles</h1>
-                    <hr />
-                    <ol id="posts-list" class="hfeed">
+      <div>
+            <a href="../tag/shell.html" class="tag">shell</a>
+      </div>
 
-            <li><article class="hentry">
-                <header>
-                    <h1><a href="/splunk-cheatsheet.html" rel="bookmark"
-                           title="Permalink to Splunk cheatsheet">Splunk cheatsheet</a></h1>
-                </header>
+    </div>
 
-                <div class="entry-content">
-<footer class="post-info">
-        <abbr class="published" title="2017-03-26T16:48:00+02:00">
-                Published: Sun 26 March 2017
-        </abbr>
-		<br />
-        <abbr class="modified" title="2017-03-26T16:48:00+02:00">
-                Updated: Sun 26 March 2017
-        </abbr>
+  </article>
+  <div class="separator"></div>
+  <article>
+    <header>
+      <h2><a href="../most-used-history-command.html">Find most used history command</a></h2>
+      <time datetime="" title="2016-07-27T16:55:00+02:00" pubdate>Wed 27 July 2016</time>
+    </header>
 
-        <address class="vcard author">
-                By                         <a class="url fn" href="/author/jitse-jan.html">Jitse-Jan</a>
-        </address>
-<p>In <a href="/category/splunk.html">splunk</a>.</p>
-<p>tags: <a href="/tag/splunk.html">splunk</a> <a href="/tag/cheatsheet.html">cheatsheet</a> </p>
-</footer><!-- /.post-info -->                <p>This is my Splunk cheatsheet</p>
-                <a class="readmore" href="/splunk-cheatsheet.html">read more</a>
-                </div><!-- /.entry-content -->
-            </article></li>
+    <div class="article_content">
+      <p>Find most used history command</p>
+    </div>
 
-            <li><article class="hentry">
-                <header>
-                    <h1><a href="/pandas-cheatsheet.html" rel="bookmark"
-                           title="Permalink to Pandas cheatsheet">Pandas cheatsheet</a></h1>
-                </header>
+    <div class="meta">
+      <div>
+        <a href="../most-used-history-command.html" class="read_more">Read more &#8594;</a>
+      </div>
 
-                <div class="entry-content">
-<footer class="post-info">
-        <abbr class="published" title="2017-03-26T16:47:00+02:00">
-                Published: Sun 26 March 2017
-        </abbr>
-		<br />
-        <abbr class="modified" title="2017-03-26T16:47:00+02:00">
-                Updated: Sun 26 March 2017
-        </abbr>
+      <div>
+            <a href="../tag/shell.html" class="tag">shell</a>
+      </div>
 
-        <address class="vcard author">
-                By                         <a class="url fn" href="/author/jitse-jan.html">Jitse-Jan</a>
-        </address>
-<p>In <a href="/category/pandas.html">pandas</a>.</p>
-<p>tags: <a href="/tag/pandas.html">pandas</a> <a href="/tag/cheatsheet.html">cheatsheet</a> </p>
-</footer><!-- /.post-info -->                <p>This is my Pandas cheatsheet</p>
-                <a class="readmore" href="/pandas-cheatsheet.html">read more</a>
-                </div><!-- /.entry-content -->
-            </article></li>
+    </div>
 
-            <li><article class="hentry">
-                <header>
-                    <h1><a href="/latex-cheatsheet.html" rel="bookmark"
-                           title="Permalink to Latex cheatsheet">Latex cheatsheet</a></h1>
-                </header>
+  </article>
+  <div class="separator"></div>
 
-                <div class="entry-content">
-<footer class="post-info">
-        <abbr class="published" title="2017-03-26T16:45:00+02:00">
-                Published: Sun 26 March 2017
-        </abbr>
-		<br />
-        <abbr class="modified" title="2017-03-26T16:45:00+02:00">
-                Updated: Sun 26 March 2017
-        </abbr>
+  <nav class="pagination row">
+    <div class="col-xs-6 left">
+    </div>
+    <div class="col-xs-6 right">
+    </div>
+  </nav>
 
-        <address class="vcard author">
-                By                         <a class="url fn" href="/author/jitse-jan.html">Jitse-Jan</a>
-        </address>
-<p>In <a href="/category/latex.html">Latex</a>.</p>
-<p>tags: <a href="/tag/latex.html">latex</a> <a href="/tag/cheatsheet.html">cheatsheet</a> </p>
-</footer><!-- /.post-info -->                <p>This is my Latex cheatsheet</p>
-                <a class="readmore" href="/latex-cheatsheet.html">read more</a>
-                </div><!-- /.entry-content -->
-            </article></li>
+  </div>
 
-            <li><article class="hentry">
-                <header>
-                    <h1><a href="/create-big-files-with-dd.html" rel="bookmark"
-                           title="Permalink to Create big files with dd">Create big files with dd</a></h1>
-                </header>
+</div>
 
-                <div class="entry-content">
-<footer class="post-info">
-        <abbr class="published" title="2016-07-28T10:45:00+02:00">
-                Published: Thu 28 July 2016
-        </abbr>
-		<br />
-        <abbr class="modified" title="2017-03-26T16:57:00+02:00">
-                Updated: Sun 26 March 2017
-        </abbr>
+        <style type="text/css">.text_cell .prompt {
+    display: none;
+}
 
-        <address class="vcard author">
-                By                         <a class="url fn" href="/author/jitse-jan.html">Jitse-Jan</a>
-        </address>
-<p>In <a href="/category/posts.html">posts</a>.</p>
-<p>tags: <a href="/tag/shell.html">shell</a> </p>
-</footer><!-- /.post-info -->                <p>Create big files with dd</p>
-                <a class="readmore" href="/create-big-files-with-dd.html">read more</a>
-                </div><!-- /.entry-content -->
-            </article></li>
+div.cell {
+    padding: 0;
+}
 
-            <li><article class="hentry">
-                <header>
-                    <h1><a href="/most-used-history-command.html" rel="bookmark"
-                           title="Permalink to Find most used history command">Find most used history command</a></h1>
-                </header>
+div.text_cell_render {
+    padding: 0;
+}
 
-                <div class="entry-content">
-<footer class="post-info">
-        <abbr class="published" title="2016-07-27T16:55:00+02:00">
-                Published: Wed 27 July 2016
-        </abbr>
-		<br />
-        <abbr class="modified" title="2017-03-26T16:56:00+02:00">
-                Updated: Sun 26 March 2017
-        </abbr>
+div.prompt {
+    font-size: 13px;
+}
 
-        <address class="vcard author">
-                By                         <a class="url fn" href="/author/jitse-jan.html">Jitse-Jan</a>
-        </address>
-<p>In <a href="/category/posts.html">posts</a>.</p>
-<p>tags: <a href="/tag/shell.html">shell</a> </p>
-</footer><!-- /.post-info -->                <p>Find most used history command</p>
-                <a class="readmore" href="/most-used-history-command.html">read more</a>
-                </div><!-- /.entry-content -->
-            </article></li>
-                </ol><!-- /#posts-list -->
-                </section><!-- /#content -->
-        <section id="extras" class="body">
-                <div class="blogroll">
-                        <h2>links</h2>
-                        <ul>
-                            <li><a href="http://getpelican.com/">Pelican</a></li>
-                            <li><a href="http://python.org/">Python.org</a></li>
-                            <li><a href="http://jinja.pocoo.org/">Jinja2</a></li>
-                            <li><a href="#">You can modify those links in your config file</a></li>
-                        </ul>
-                </div><!-- /.blogroll -->
-                <div class="social">
-                        <h2>social</h2>
-                        <ul>
+div.input_prompt {
+    padding: .7em 0.2em;
+}
 
-                            <li><a href="#">You can add links in your config file</a></li>
-                            <li><a href="#">Another social link</a></li>
-                        </ul>
-                </div><!-- /.social -->
-        </section><!-- /#extras -->
+div.output_prompt {
+    padding: .4em .2em;
+}
 
-        <footer id="contentinfo" class="body">
-                <address id="about" class="vcard body">
-                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
-                </address><!-- /#about -->
+div.input_area {
+    margin: .2em 0.4em;
+}
 
-                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
-        </footer><!-- /#contentinfo -->
+table.dataframe {
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    line-height: 20px;
+}
 
-</body>
+table.dataframe th, td {
+    padding: 4px;
+    text-align: left;
+}</style>
+    </body>
 </html>
