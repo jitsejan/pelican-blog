@@ -43,3 +43,13 @@ EXTRA_HEADER = open('_nb_header.html').read().decode('utf-8') if os.path.exists(
 NOTEBOOK_DIR = 'notebooks'
 LOAD_CONTENT_CACHE = False
 
+DISPLAY_PAGES_ON_MENU = True
+TWITTER_USERNAME = 'jqadrad'
+
+TYPOGRIFY = True
+PAGE_PATHS = ['pages']
+PAGES = [{'url': 'pages/latex-cheatsheet', 'title': 'Latex cheatsheet'},
+		 {'url': 'pages/pandas-cheatsheet', 'title': 'Pandas cheatsheet'},
+		 {'url': 'pages/python-cheatsheet', 'title': 'Python cheatsheet'},
+		 {'url': 'pages/splunk-cheatsheet', 'title': 'Splunk cheatsheet'},
+		]

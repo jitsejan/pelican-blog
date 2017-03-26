@@ -15,9 +15,10 @@
         <link rel="stylesheet" href="/theme/css/pygments.css">
         <link rel="stylesheet" href="/theme/css/main.css">
 
+        {% if EXTRA_HEADER %}{{ EXTRA_HEADER }}{% endif %}
+
         {% block extra_head %}{%endblock%}
 
-        {% if EXTRA_HEADER %}{{ EXTRA_HEADER }}{% endif %}
     </head>
 
     <body>
@@ -27,6 +28,11 @@
                     <a class="navbar-brand" href="/" title="Home" class="title">JJ's World</a></li>
                 </div>
                 <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+                    <ul class="nav navbar-nav navbar-left">
+                     {% for p in PAGES %}
+                        <li{% if p == page %} class="active"{% endif %}><a href="{{ SITEURL }}/{{ p.url }}">{{ p.title }}</a></li>
+                    {% endfor %}
+                    </ul>
                     <ul class="nav navbar-nav navbar-right">
                         {% if ABOUT_PAGE %}
                             <li><a href="{{ ABOUT_PAGE }}" title="About">About</a></li>
@@ -49,6 +55,15 @@
         </header>
 
         {% block content %}{% endblock %}
+
+        <footer id="contentinfo" class="footer">
+            <nav class="pull-right bottom-nav">
+                <a href="{{ FEED_DOMAIN }}/{{ FEED_ALL_ATOM }}">RSS</a>
+            </nav>
+            <address id="about" class="vcard body">
+            &copy; <a href="{{SITEURL}}">{{SITENAME}}</a> Proudly powered by <a href="http://getpelican.com/">Pelican</a>
+            </address><!-- /#about -->
+        </footer><!-- /#contentinfo -->
         <style type="text/css">{% include 'ipynb.css' %}</style>
         {% include 'analytics.html' %}
     </body>
