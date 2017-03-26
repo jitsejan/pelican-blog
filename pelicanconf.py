@@ -39,7 +39,7 @@ PLUGIN_PATHS = ['plugins']
 PLUGINS = ['liquid_tags.notebook', 'liquid_tags.literal']
 
 DELETE_OUTPUT_DIRECTORY = False
-EXTRA_HEADER = open('_nb_header.html').read().decode('utf-8') if os.path.exists('_nb_header.html') else None
+EXTRA_HEADER = open('_nb_header.html').read() if os.path.exists('_nb_header.html') else None
 NOTEBOOK_DIR = 'notebooks'
 LOAD_CONTENT_CACHE = False
 
