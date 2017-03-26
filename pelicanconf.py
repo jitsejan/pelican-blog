@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*- #
 from __future__ import unicode_literals
+import os
 
 AUTHOR = u'Jitse-Jan'
 SITENAME = u"JJ's World"
@@ -34,3 +35,11 @@ DEFAULT_PAGINATION = 10
 # Uncomment following line if you want document-relative URLs when developing
 RELATIVE_URLS = True
 THEME = 'themes/middle-theme'
+PLUGIN_PATHS = ['plugins']
+PLUGINS = ['liquid_tags.notebook', 'liquid_tags.literal']
+
+DELETE_OUTPUT_DIRECTORY = False
+EXTRA_HEADER = open('_nb_header.html').read().decode('utf-8') if os.path.exists('_nb_header.html') else None
+NOTEBOOK_DIR = 'notebooks'
+LOAD_CONTENT_CACHE = False
+

@@ -1,0 +1,10 @@
+Title: Unittesting in a Jupyter notebook
+Date: 2017-01-17 11:41
+Modified: 2017-01-17 11:41
+Category: posts
+Tags: notebook, unittest, Python, Jupyter
+Slug: unittesting-in-jupyter-notebook
+Authors: Jitse-Jan
+Summary: Unittesting in a Jupyter notebook
+
+{% notebook example_unittesting.ipynb %}
