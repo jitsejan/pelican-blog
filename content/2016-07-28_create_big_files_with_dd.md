@@ -5,7 +5,7 @@ Category: posts
 Tags: shell
 Slug: create-big-files-with-dd
 Authors: Jitse-Jan
-Summary: Create big files with dd
+Summary:
 
 Use dd in Unix to create files with a size of 2.7 GB.
 ``` shell
