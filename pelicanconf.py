@@ -36,7 +36,7 @@ DEFAULT_PAGINATION = 10
 RELATIVE_URLS = True
 THEME = 'themes/middle-theme'
 PLUGIN_PATHS = ['plugins']
-PLUGINS = ['liquid_tags.notebook', 'liquid_tags.literal', 'assets']
+PLUGINS = ['liquid_tags.notebook', 'liquid_tags.literal', 'assets', "tag_cloud"]
 
 DELETE_OUTPUT_DIRECTORY = False
 EXTRA_HEADER = open('_nb_header.html').read() if os.path.exists('_nb_header.html') else None
@@ -57,3 +57,9 @@ PAGES = [{'url': 'pages/latex-cheatsheet', 'title': 'Latex cheatsheet'},
 		 {'url': 'pages/python-cheatsheet', 'title': 'Python cheatsheet'},
 		 {'url': 'pages/splunk-cheatsheet', 'title': 'Splunk cheatsheet'},
 		]
+
+ABOUT = """I am a Data Scientist currently working for Itility BV. I have a passion for the field of machine learning, pattern recognition, big data and ubiquitous computing.
+
+While I mainly work in Python, I try to experiment with different languages and frameworks when I can. I am using this page as a portfolio and showcase, but mainly as a cheatsheet. That's why you will mainly find shell commands or short scripts just for myself to not reinvent the wheel."""
+
+ABOUT_IMG = "http://jitsejan.com/static/images/JJ_Montreal.png"

@@ -4,7 +4,7 @@
 
 {% block content %}
 <div class="container index">
-
+  <div class="col-md-9">
   {% for article in articles_page.object_list %}
   <article>
     <header>
@@ -13,14 +13,19 @@
     </header>
 
     <div class="article_content">
-      {{ article.summary }}
+      {% if article.summary %}
+        {{ article.summary }}
+      {% else %}
+        {{ article.content }}
+      {% endif %}
     </div>
-
+    
     <div class="meta">
+      {% if article.summary %}
       <div>
         <a href="{{ SITEURL }}/{{ article.url }}" class="read_more">Read more &#8594;</a>
       </div>
-
+       {% endif %}
       <div>
           {% for tag in article.tags %}
             <a href="{{ SITEURL }}/{{ tag.url }}" class="tag">{{ tag }}</a>
@@ -46,6 +51,11 @@
     </div>
   </nav>
 
+  </div>
+  <div class="col-md-3">
+    {% include 'sidebar.html' %}
+  </div>
+  
   </div>
 
 </div>

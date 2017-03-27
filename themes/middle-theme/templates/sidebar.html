@@ -1,0 +1,33 @@
+<aside class="page-sidebar">
+    {% if ABOUT %}
+    <nav class="widget" id="sidebar-about">
+        {% if ABOUT_IMG %}
+        <div class="row img-div">
+            <img src="{{ ABOUT_IMG }}" />
+        </div>
+        {% endif %}
+        <div class="row">
+        {{ ABOUT }}
+        </div>  
+    </nav>
+    {% endif %}
+
+
+    {% if tags %}
+    <nav class="widget">
+     <ul class="tagcloud">
+    {% for tag in tag_cloud %}
+        <li class="tag-{{ tag.1 }}">
+            <a href="{{ SITEURL }}/{{ tag.0.url }}">
+            {{ tag.0 }}
+                {% if TAG_CLOUD_BADGE %}
+                    <span class="badge">{{ tag.2 }}</span>
+                {% endif %}
+            </a>
+        </li>
+    {% endfor %}
+    </ul>
+  </nav>
+  {% endif %}
+
+</aside>
