@@ -36,7 +36,7 @@ DEFAULT_PAGINATION = 10
 RELATIVE_URLS = True
 THEME = 'themes/middle-theme'
 PLUGIN_PATHS = ['plugins']
-PLUGINS = ['liquid_tags.notebook', 'liquid_tags.literal']
+PLUGINS = ['liquid_tags.notebook', 'liquid_tags.literal', 'assets']
 
 DELETE_OUTPUT_DIRECTORY = False
 EXTRA_HEADER = open('_nb_header.html').read() if os.path.exists('_nb_header.html') else None
@@ -44,6 +44,10 @@ NOTEBOOK_DIR = 'notebooks'
 LOAD_CONTENT_CACHE = False
 
 DISPLAY_PAGES_ON_MENU = True
+FACEBOOK_USERNAME = 'jitsejan'
+FLICKR_USERNAME = 'jitsejan'
+LINKEDIN_USERNAME = 'jitsejan'
+SPOTIFY_USERNAME = 'jitsejan'
 TWITTER_USERNAME = 'jqadrad'
 
 TYPOGRIFY = True

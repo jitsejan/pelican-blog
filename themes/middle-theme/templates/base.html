@@ -10,14 +10,16 @@
 
         {% if EXTRA_HEADER %}{{ EXTRA_HEADER }}{% endif %}
 
-
         <link rel="alternate" type="application/atom+xml" title="{{SITENAME}} blog atom feed" href="/feeds/all.atom.xml" />
-        <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700' rel='stylesheet' type='text/css'>
-
+        <link href='http://fonts.googleapis.com/css?family=Raleway:300,400,700' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" />
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
         <link rel="stylesheet" href="/theme/css/pygments.css">
-        <link rel="stylesheet" href="/theme/css/main.css">
+        <!--<link rel="stylesheet" href="/theme/css/main.css">-->
 
+        {% assets filters="less", output="css/blog.css", "css/main.less" %}
+            <link rel="stylesheet" href="{{ SITEURL }}/{{ ASSET_URL }}">
+        {% endassets %}
 
         {% block extra_head %}{%endblock%}
 
@@ -36,20 +38,20 @@
                     {% endfor %}
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
-                        {% if ABOUT_PAGE %}
-                            <li><a href="{{ ABOUT_PAGE }}" title="About">About</a></li>
+                        {% if FACEBOOK_USERNAME %}
+                            <li><a href="http://www.facebook.com/{{ FACEBOOK_USERNAME }}" title="Facebook" rel="me"><i class="fa fa-facebook"></i></a></li>
                         {% endif %}
-                        {% if GITHUB_USERNAME %}
-                            <li><a href="http://github.com/{{ GITHUB_USERNAME }}" title="{{ GITHUB_USERNAME }}'s Github" rel="me">Github</a></li>
+                        {% if FLICKR_USERNAME %}
+                            <li><a href="http://www.flickr.com/photos/{{ FLICKR_USERNAME }}" title="Flickr" rel="me"><i class="fa fa-flickr"></i></a></li>
+                        {% endif %}
+                        {% if SPOTIFY_USERNAME %}
+                            <li><a href="https://play.spotify.com/user/{{ SPOTIFY_USERNAME }}" title="Spotify" rel="me"><i class="fa fa-spotify"></i></a></li>
+                        {% endif %}
+                        {% if LINKEDIN_USERNAME %}
+                            <li><a href="https://www.linkedin.com/in/{{ LINKEDIN_USERNAME }}" title="LinkedIn" rel="me"><i class="fa fa-linkedin"></i></a></li>
                         {% endif %}
                         {% if TWITTER_USERNAME %}
-                            <li><a href="http://twitter.com/{{ TWITTER_USERNAME }}" title="{{ TWITTER_USERNAME }} Twitter" rel="me">Twitter</a></li>
-                        {% endif %}
-                        {% if SHOW_ARCHIVES %}
-                            <li><a href="/archives.html" title="Archive">Archive</a></li>
-                        {% endif %}
-                        {% if SHOW_FEED %}
-                            <li><a href="/feeds/all.atom.xml" title="danielfrg.github.io RSS feed" rel="me">RSS</a></li>
+                            <li><a href="http://twitter.com/{{ TWITTER_USERNAME }}" title="Twitter" rel="me"><i class="fa fa-twitter"></i></a></li>
                         {% endif %}
                     </ul>
                 </nav>
@@ -59,12 +61,11 @@
         {% block content %}{% endblock %}
 
         <footer id="contentinfo" class="footer">
-            <nav class="pull-right bottom-nav">
-                <a href="{{ FEED_DOMAIN }}/{{ FEED_ALL_ATOM }}">RSS</a>
-            </nav>
-            <address id="about" class="vcard body">
-            &copy; <a href="{{SITEURL}}">{{SITENAME}}</a> Proudly powered by <a href="http://getpelican.com/">Pelican</a>
-            </address><!-- /#about -->
+            <center>
+                <address id="about" class="vcard body">
+                &copy; <a href="{{SITEURL}}">{{SITENAME}}</a> Proudly powered by <a href="http://getpelican.com/">Pelican</a>
+                </address><!-- /#about -->
+            </center>
         </footer><!-- /#contentinfo -->
         <style type="text/css">{% include 'ipynb.css' %}</style>
         {% include 'analytics.html' %}

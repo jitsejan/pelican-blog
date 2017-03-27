@@ -1,12 +1,12 @@
 // out: ./main.css, compress: true
 
-@text-color: #222;
-@link-color: #007EE5;
-
+@text-color: rgb(40,40,40);
+@link-color: rgb(102, 153, 255);
+@mario-light-blue: rgb(102, 153, 255);
 body {
     margin: 0;
     padding: 0;
-    font: 15px 'Source Sans Pro', sans-serif;
+    font: 15px "Raleway", sans-serif;
     line-height: 1.6em;
     color: @text-color;
     text-rendering: optimizeLegibility;
@@ -14,12 +14,18 @@ body {
 }
 
 pre {
-    color: #272822;
+    text-color: white;
+    background-color: #272822;
 }
 
 a {
     color: @link-color;
     text-decoration: none;
+}
+
+a.anchor-link{
+	visibility: none;
+	display: none;
 }
 
 a:hover {
@@ -28,7 +34,7 @@ a:hover {
 }
 
 header.main-header {
-    background: none repeat scroll 0% 0% #2A66C0;
+    background: none repeat scroll 0% 0% @mario-light-blue;
 
     a {
         color: #fff;
@@ -39,7 +45,7 @@ header.main-header {
 
         nav {
             a:hover {
-                background-color: #2A66C0;
+                background-color: @mario-light-blue;
             }
         }
     }
