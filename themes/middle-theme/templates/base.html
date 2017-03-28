@@ -26,48 +26,10 @@
     </head>
 
     <body>
-        <header class="navbar navbar-static-top bs-docs-nav main-header">
-            <div class="container">
-                <div class="navbar-header">
-                    <a class="navbar-brand" href="/" title="Home" class="title">JJ's World</a></li>
-                </div>
-                <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
-                    <ul class="nav navbar-nav navbar-left">
-                     {% for p in PAGES %}
-                        <li{% if p == page %} class="active"{% endif %}><a href="{{ SITEURL }}/{{ p.url }}">{{ p.title }}</a></li>
-                    {% endfor %}
-                    </ul>
-                    <ul class="nav navbar-nav navbar-right">
-                        {% if FACEBOOK_USERNAME %}
-                            <li><a href="http://www.facebook.com/{{ FACEBOOK_USERNAME }}" title="Facebook" rel="me"><i class="fa fa-facebook"></i></a></li>
-                        {% endif %}
-                        {% if FLICKR_USERNAME %}
-                            <li><a href="http://www.flickr.com/photos/{{ FLICKR_USERNAME }}" title="Flickr" rel="me"><i class="fa fa-flickr"></i></a></li>
-                        {% endif %}
-                        {% if SPOTIFY_USERNAME %}
-                            <li><a href="https://play.spotify.com/user/{{ SPOTIFY_USERNAME }}" title="Spotify" rel="me"><i class="fa fa-spotify"></i></a></li>
-                        {% endif %}
-                        {% if LINKEDIN_USERNAME %}
-                            <li><a href="https://www.linkedin.com/in/{{ LINKEDIN_USERNAME }}" title="LinkedIn" rel="me"><i class="fa fa-linkedin"></i></a></li>
-                        {% endif %}
-                        {% if TWITTER_USERNAME %}
-                            <li><a href="http://twitter.com/{{ TWITTER_USERNAME }}" title="Twitter" rel="me"><i class="fa fa-twitter"></i></a></li>
-                        {% endif %}
-                    </ul>
-                </nav>
-            </div>
-        </header>
+        {% include 'navbar.html' %}
 
         {% block content %}{% endblock %}
 
-        <footer id="contentinfo" class="footer">
-            <center>
-                <address id="about" class="vcard body">
-                &copy; <a href="{{SITEURL}}">{{SITENAME}}</a> Proudly powered by <a href="http://getpelican.com/">Pelican</a>
-                </address><!-- /#about -->
-            </center>
-        </footer><!-- /#contentinfo -->
-        <style type="text/css">{% include 'ipynb.css' %}</style>
-        {% include 'analytics.html' %}
+        {% include 'footer.html' %}
     </body>
 </html>

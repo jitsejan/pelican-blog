@@ -1,0 +1,29 @@
+<footer id="contentinfo" class="footer">
+    <center>
+        <address id="about" class="vcard body">
+            &copy; <a href="{{SITEURL}}">{{SITENAME}}</a> | Proudly powered by <a href="http://getpelican.com/">Pelican</a> | 2008 - 2017
+        </address><!-- /#about -->
+        <div class="row">
+            <ul class="social-list">
+                {% if FACEBOOK_USERNAME %}
+                    <li><a href="http://www.facebook.com/{{ FACEBOOK_USERNAME }}" title="Facebook" rel="me"><i class="fa fa-facebook"></i></a></li>
+                {% endif %}
+                {% if FLICKR_USERNAME %}
+                    <li><a href="http://www.flickr.com/photos/{{ FLICKR_USERNAME }}" title="Flickr" rel="me"><i class="fa fa-flickr"></i></a></li>
+                {% endif %}
+                {% if SPOTIFY_USERNAME %}
+                    <li><a href="https://play.spotify.com/user/{{ SPOTIFY_USERNAME }}" title="Spotify" rel="me"><i class="fa fa-spotify"></i></a></li>
+                {% endif %}
+                {% if LINKEDIN_USERNAME %}
+                    <li><a href="https://www.linkedin.com/in/{{ LINKEDIN_USERNAME }}" title="LinkedIn" rel="me"><i class="fa fa-linkedin"></i></a></li>
+                {% endif %}
+                {% if TWITTER_USERNAME %}
+                    <li><a href="http://twitter.com/{{ TWITTER_USERNAME }}" title="Twitter" rel="me"><i class="fa fa-twitter"></i></a></li>
+                {% endif %}
+            </ul>
+        </div>
+    </center>
+</footer><!-- /#contentinfo -->
+<style type="text/css">{% include 'ipynb.css' %}</style>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+{% include 'analytics.html' %}

@@ -51,6 +51,82 @@ header.main-header {
     }
 }
 
+.navbar-default {
+    background-color: rgb(102,153,255);
+    border: 0px;
+    /*border-bottom-color: rgb(200, 200, 200);*/
+    background-image: url('http://www.jitsejan.com/static/images/Bar.GIF');
+    background-repeat: repeat-x;
+    background-position: bottom;
+    padding: 10px 0px 20px 0px;
+}
+.navbar-default .navbar-brand {
+    color: #fff;
+    margin-top: 3px;
+}
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+    color: #fff;
+    background-color: none;
+}
+.navbar-default .navbar-nav > li{
+    a{
+        color: #fff;
+    }
+    a.active{
+        background-color: white;
+    }
+}
+.navbar-default .navbar-nav>.active>a,
+.navbar-default .navbar-nav>.active>a:focus,
+.navbar-default .navbar-nav>.active>a:hover{
+    background-color: rgb(102,153,255);
+}
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+    color: #fff;
+    background-color: rgb(102,153,255);
+    /*border-bottom: 2px solid rgb(102, 153, 255);*/
+}
+
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+    color: #fff;
+    background-color: rgb(102,153,255);
+    font-weight: bold;
+    /*border-bottom: 2px solid rgb(102, 153, 255);*/
+}
+
+.navbar-default .navbar-nav > li > img.mario-img {
+  display: none;
+  margin: 0px auto -4px auto;
+  height: 16px;
+}
+
+@media screen and (min-width: 768px) {
+  .navbar-default .navbar-nav > li.active > img.mario-img {
+    display: block;
+  }
+}
+
+.navbar-default .navbar-toggle,
+.navbar-default .navbar-toggle:focus,
+.navbar-default .navbar-toggle:visited,
+.navbar-default .navbar-toggle:active {
+   border: none;
+   background-color: none;
+}
+.navbar-toggle{
+   padding: 0px;
+   margin: 0px;
+   margin-top: -10px;
+   margin-right: 16px;
+}
+.navbar-default .navbar-toggle:hover{
+   background-color: rgb(102,153,255);
+}
+
 article {
     margin: 0;
 
@@ -67,7 +143,7 @@ article {
         time {
             color: #9E9E9E;
             font-size: 0.85em;
-            float: right;
+            float: left;
         }
     }
 
@@ -159,14 +235,14 @@ article {
             font-size: 14px;
             font-weight: 800;
             padding: 10px 20px;
-            color: #007EE5;
+            color: @mario-light-blue;
             background: #FFF;
-            border: 1px solid #007EE5;
+            border: 1px solid @mario-light-blue;
         }
 
         a.read_more:hover, a.comments_btn:hover {
             color: #FFF;
-            background: #007EE5;
+            background: @mario-light-blue;
         }
     }
 }
@@ -196,7 +272,7 @@ article {
         padding: 40px 0 0 0;
         margin: 0 0 40px 0;
         height: 10px;
-        border-bottom: solid 1px #CCC;
+        border-bottom: solid 1px @mario-light-blue;
     }
 
     .pagination {
@@ -213,16 +289,16 @@ article {
 
         a {
             display: inline-block;
-            border: 2px solid #007EE5;
+            border: 2px solid @mario-light-blue;
             margin: 0 5px;
             padding: 8px 20px;
             font-weight: bold;
-            color: #007EE5;
+            color: @mario-light-blue;
         }
 
         a:hover {
             color: #FFF;
-            background: #007EE5;
+            background: @mario-light-blue;
         }
     }
 }
@@ -292,7 +368,7 @@ article {
     margin-bottom: 30px;
 }
 #sidebar-about{
-    font-size: small;
+    font-size: x-small;
     font-style: italic;
     text-align: justify;
     
@@ -346,4 +422,14 @@ ul.tagcloud {
     background-color: grey;
     color: white;
     }
+}
+
+ul.social-list{
+  list-style: none;
+  padding: 0;
+  text-align: center;
+  li {
+    display: inline-block;
+    margin: 0px 2px;
+  }
 }
