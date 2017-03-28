@@ -67,9 +67,10 @@ if not IPYTHON_VERSION >= 1:
     raise ValueError("IPython version 1.0+ required for notebook tag")
 
 if IPYTHON_VERSION > 1:
-    warnings.warn("Pelican plugin is not designed to work with IPython "
-                  "versions greater than 1.x. CSS styles have changed in "
-                  "later releases.")
+    pass
+    # warnings.warn("Pelican plugin is not designed to work with IPython "
+    #               "versions greater than 1.x. CSS styles have changed in "
+    #               "later releases.")
 
 try:
     from nbconvert.filters.highlight import _pygments_highlight
@@ -339,8 +340,8 @@ def notebook(preprocessor, tag, markup):
 
     # if we haven't already saved the header, save it here.
     if not notebook.header_saved:
-        print ("\n ** Writing styles to _nb_header.html: "
-               "this should be included in the theme. **\n")
+        # print ("\n ** Writing styles to _nb_header.html: "
+        #       "this should be included in the theme. **\n")
 
         header = '\n'.join(CSS_WRAPPER.format(css_line)
                            for css_line in resources['inlining']['css'])
