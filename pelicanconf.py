@@ -62,7 +62,7 @@ ABOUT = """I am a Data Scientist currently working for Itility BV. I have a pass
 
 While I mainly work in Python, I try to experiment with different languages and frameworks when I can. I am using this page as a portfolio and showcase, but mainly as a cheatsheet. That's why you will mainly find shell commands or short scripts just for myself to not reinvent the wheel."""
 
-ABOUT_IMG = "http://jitsejan.com/static/images/JJ_Montreal.png"
+ABOUT_IMG = "/theme/images/JJ_Montreal.png"
 
 GOOGLE_ANALYTICS_CODE = 'UA-86650752-1'
 GOOGLE_ANALYTICS_DOMAIN = 'www.jitsejan.com'
