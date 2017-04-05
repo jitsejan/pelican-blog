@@ -120,3 +120,32 @@ for element in character_df.index:
     if not pd.isnull(superpower):
        print 'Super!'
 ```
+
+### Substract 
+Substract two consecutive cells
+``` python
+df['difference'] = df['amount'] - df['amount'].shift(+1)
+```
+
+### Add a maximum column for a groupby
+``` python
+df['group_maximum'] = df.groupby(['category'])['score'].transform(max)
+```
+
+### Create category based on values
+``` python
+def set_category(row):
+    if row['score'] < float(row['maximum']/3):
+        return 'beginner'
+    elif row['score'] >= float(row['maximum']/3*2):
+        return 'expert' 
+    else:
+        return 'intermediate'
+
+df['category'] = df.apply(set_category, axis=1)
+```
+
+### Apply lambda function
+``` python
+df['inverse_number'] = df['number'].apply(lambda x: x**(-1))
+``` 
