@@ -63,8 +63,14 @@ character_df.rename(columns={'name': 'character_name'}, inplace=True)
 ```
 ### Drop a column
 ``` python
-character_df = character_df.drop('origin', 1)
+character_df = character_df.drop('origin', axis=1)
 ```
+### Drop a row
+Drop all rows where the name is NaN.
+``` python
+character_df.dropna(subset = ['name'], inplace=True)
+```
+
 ### Delete a column
 ``` python
 del character_df['special_diet']
@@ -149,3 +155,4 @@ df['category'] = df.apply(set_category, axis=1)
 ``` python
 df['inverse_number'] = df['number'].apply(lambda x: x**(-1))
 ``` 
+

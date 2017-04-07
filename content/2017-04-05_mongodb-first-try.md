@@ -7,4 +7,4 @@ Slug: mongodb_first_try
 Authors: Jitse-Jan
 Summary: My first experience with [MongoDB](https://www.mongodb.com/mongodb-3.4). I will install MongoDB and Pymongo, insert some data and query it. Next step will be to tryout [monary](https://bitbucket.org/djcbeach/monary/wiki/Home), but for this notebook it is out of scope.
 
-{% notebook mongodb_first_try.ipnyb %}
+{% notebook mongodb_first_try.ipynb %}
