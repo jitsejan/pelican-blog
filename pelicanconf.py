@@ -36,7 +36,7 @@ DEFAULT_PAGINATION = 10
 RELATIVE_URLS = True
 THEME = 'themes/middle-theme'
 PLUGIN_PATHS = ['plugins']
-PLUGINS = ['liquid_tags.notebook', 'liquid_tags.literal', 'assets', "tag_cloud"]
+PLUGINS = ['liquid_tags.notebook', 'liquid_tags.literal', 'assets', "tag_cloud", 'tipue_search']
 
 DELETE_OUTPUT_DIRECTORY = False
 EXTRA_HEADER = open('_nb_header.html').read() if os.path.exists('_nb_header.html') else None
@@ -72,3 +72,5 @@ TAG_CLOUD_MAX_ITEMS = 20 	    # Maximum number of tags in the cloud.
 TAG_CLOUD_SORTING = 'random' 	# The tag cloud ordering scheme. Valid values: random, alphabetically, alphabetically-rev, size and size-rev
 TAG_CLOUD_BADGE = False	        # Optional setting : can bring badges, which mean say : display the number of each tags present on all articles.' 
 
+TIPUE_SEARCH = True
+DIRECT_TEMPLATES = (('index', 'tags', 'categories', 'authors', 'archives', 'search'))
