@@ -1,4 +1,4 @@
-Title: Getting started with ElasticSearch
+Title: Getting started with Elasticsearch
 Date: 2016-08-06 13:51
 Modified: 2017-03-27 16:06
 Category: posts
