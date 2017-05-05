@@ -50,7 +50,7 @@ LINKEDIN_USERNAME = 'jitsejan'
 SPOTIFY_USERNAME = 'jitsejan'
 TWITTER_USERNAME = 'jqadrad'
 
-TYPOGRIFY = True
+TYPOGRIFY = False
 PAGE_PATHS = ['pages']
 PAGES = [{'url': 'pages/latex-cheatsheet', 'title': 'Latex cheatsheet'},
 		 {'url': 'pages/pandas-cheatsheet', 'title': 'Pandas cheatsheet'},
