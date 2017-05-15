@@ -2,7 +2,7 @@ Title: Creating a dashboard with MEAN.JS
 Date: 2017-04-16 18:55
 Modified: 2017-03-26 16:56
 Category: posts
-Tags: MongoDB, Express.js, Angular 2, Nodejs, MEAN, dashboard
+Tags: MongoDB, Express.js, Angular 2, Node, MEAN, dashboard, D3.js
 Slug: creating-dashboard-with-meanjs
 Authors: Jitse-Jan
 Summary: I will make a dashboard to give an overview of the refills for the car using MEAN.JS and D3.js. 

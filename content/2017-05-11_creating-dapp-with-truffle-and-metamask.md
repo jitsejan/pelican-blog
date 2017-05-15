@@ -151,9 +151,9 @@ jitsejan@Jitse-Jans-MacBook-Pro  /Users/jitsejan/code/truffle-dapp  $ npm run de
 ```
 Now by accessing localhost:8080 the web application is visible and we can send some MetaCoin.
 
-Open op Google Chrome and make sure [Metamask](https://chrome.google.com/webstore/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn?authuser=2) is installed. Next open up Metamask and restore from DEN and fill in the 12 words that the testrpc showed you before. Make sure you are connected to localhost:8545.
+Open up Google Chrome and make sure [Metamask](https://chrome.google.com/webstore/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn?authuser=2) is installed. Next open up Metamask and restore from DEN and fill in the 12 words that the testrpc showed you before. Make sure you are connected to localhost:8545.
 
-Click in Metamask on the icon on the top to switch accounts. Click on add and the other accounts will appear. We can now choose one of the other 9 accounts to send some MetaCoin. Click on the copy icon next to the account and enter it in the input field in the form. Add the amound of MetaCoin you want to send and hit Send MetaCoin. Metamask will show a pop-up asking you to accept the transaction.
+Click in Metamask on the icon on the top to switch accounts. Click on add and the other accounts will appear. We can now choose one of the other 9 accounts to send some MetaCoin. Click on the copy icon next to the account and enter it in the input field in the form. Add the amount of MetaCoin you want to send and hit Send MetaCoin. Metamask will show a pop-up asking you to accept the transaction.
 
 Once the MetaCoin are sent, the amount on the frontpage are reduced. Clicking again on Metamask will show the history of transactions.
 
