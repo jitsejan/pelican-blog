@@ -4,6 +4,9 @@
 
 {% block content %}
 <div class="container index">
+  <div class="col-xs-12 hidden-md hidden-lg hidden-sm">
+    {% include 'searchbar.html' %}
+  </div>
   <div class="col-md-9">
   {% for article in articles_page.object_list %}
   <article>
@@ -51,6 +54,9 @@
     </div>
   </nav>
 
+  </div>
+  <div class="col-md-3 hidden-xs">
+    {% include 'searchbar.html' %}
   </div>
   <div class="col-md-3">
     {% include 'sidebar.html' %}

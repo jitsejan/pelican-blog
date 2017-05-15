@@ -108,3 +108,13 @@ browser.switch_to.window(window_name=browser.window_handles[1])
 browser.quit()
 browser.switch_to.window(window_name=browser.window_handles[0])
 ```
+
+## Pickle
+Use the pickle libary to save a variable to a file and load it again.
+```python
+import pickle
+colors = ['blue', 'red']
+pickle.dump( colors, open( "colors.p", "wb" ) )
+saved_colors = pickle.load( open( "colors.p", "rb" ) )
+saved_colors
+```
