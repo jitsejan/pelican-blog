@@ -49,19 +49,28 @@ FLICKR_USERNAME = 'jitsejan'
 LINKEDIN_USERNAME = 'jitsejan'
 SPOTIFY_USERNAME = 'jitsejan'
 TWITTER_USERNAME = 'jqadrad'
+BITBUCKET_USERNAME = 'jitsejan'
+GITHUB_USERNAME = 'jqadrad'
+BLOCKS_USERNAME = 'jqadrad'
 
 TYPOGRIFY = False
 PAGE_PATHS = ['pages']
-PAGES = [{'url': 'pages/latex-cheatsheet', 'title': 'Latex cheatsheet'},
+PAGES = [
+    # {'url': 'pages/latex-cheatsheet', 'title': 'Latex cheatsheet'},
 		 {'url': 'pages/pandas-cheatsheet', 'title': 'Pandas cheatsheet'},
 		 {'url': 'pages/python-cheatsheet', 'title': 'Python cheatsheet'},
-		 {'url': 'pages/splunk-cheatsheet', 'title': 'Splunk cheatsheet'},
+# 		 {'url': 'pages/splunk-cheatsheet', 'title': 'Splunk cheatsheet'},
 		]
 
-ABOUT = """I am a Data Scientist currently working for Itility BV. I have a passion for the field of machine learning, pattern recognition, big data and ubiquitous computing.
-
-While I mainly work in Python, I try to experiment with different languages and frameworks when I can. I am using this page as a portfolio and showcase, but mainly as a cheatsheet. That's why you will mainly find shell commands or short scripts just for myself to not reinvent the wheel."""
-
+ABOUT = """<p>I am a Data Scientist currently working for Itility BV. I have a passion for the field of machine learning, pattern recognition, big data, blockchain and ubiquitous computing.</p>
+<p>
+While I mainly work in Python, I try to experiment with different languages and frameworks when I can. Lately I have been experimenting with Javascript a bit more, since both
+for visualizations as for modern web applications it is the go-to language. 
+</p>
+<p>
+I am using this page as a portfolio and showcase, but mainly as a cheatsheet. That is why you will mainly find shell commands, short scripts or notebooks just for myself to not reinvent the wheel.
+</p>
+"""
 ABOUT_IMG = "/theme/images/JJ_Montreal.png"
 
 GOOGLE_ANALYTICS_CODE = 'UA-86650752-1'
