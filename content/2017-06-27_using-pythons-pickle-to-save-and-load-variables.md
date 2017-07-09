@@ -1,4 +1,4 @@
-Title: Using Pythons picke to save and load variables
+Title: Using Pythons pickle to save and load variables
 Date: 2017-06-27 13:45
 Modified: 2017-06-20 13:45
 Category: posts
@@ -26,5 +26,5 @@ pickle.dump(variable, open(picklename, 'wb'))
 #### Loading
 
 ```python
-pickle.load( open( name, "rb" ) )
+pickle.load( open( picklename, "rb" ) )
 ```
