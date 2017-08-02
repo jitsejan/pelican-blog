@@ -7,15 +7,38 @@ Slug: python-and-javascript-in-flask
 Authors: Jitse-Jan
 Summary: In this project I am experimenting with sending data between Javascript and Python using the web framework Flask. Additionally I will use matplotlib to generate a dynamic graph based on the provided user input data.
 
-## Introduction
+### Introduction
 In this project I am experimenting with sending data between Javascript and Python using the web framework Flask. Additionally I will use matplotlib to generate a dynamic graph based on the provided user input data.
 
-## Key learning points
+### Key learning points
 * Sending data from Python to Javascript
 * Receiving data in Python from Javascript
 * Creating an image dynamically using a special Flask route
 
-## Implementation
+### Important bits
+Send the outputData from Javascript to Python with a POST call to postmethod and use the form variable canvas_data. The POST call give a response from Python and the page is redirected to the results page with the given uuid.
+```javascript
+...
+$.post( "/postmethod", {
+      canvas_data: JSON.stringify(outputData)
+    }, function(err, req, resp){
+      window.location.href = "/results/"+resp["responseJSON"]["uuid"];  
+    });
+...
+```
+Retrieve the canvas_data from the POST request and write the content to a file. Return the unique id that was used for writing to the file.
+```python
+...
+@app.route('/postmethod', methods = ['POST'])
+def post_javascript_data():
+    jsdata = request.form['canvas_data']
+    unique_id = create_csv(jsdata)
+    params = { 'uuid' : unique_id }
+    return jsonify(params)
+...
+```
+
+### Implementation
 The core of the web application is inside this file. Here I define the different routes for the website and specify the settings. The default route shows the index.html where a canvas is shown. The result route will show the image once a picture is drawn, based on the provided unique ID. The postmethod route is defined to handle the data coming from Javascript into Python via a POST call. The content of the POST variable are written to a CSV file which can be used again on the result page where data is loaded from this same file.
 
 `app.py`
@@ -273,7 +296,7 @@ I have kept the stylesheet very basic since this project is not aimed at making 
 }
 ```
 
-After putting all the files together the application can be started and visited on port 5000. 
+After putting all the files together the application can be started and visited on port 5000 on the localhost. 
 
 ```shell
 ~/code/flask-app $ FLASK_APP=app.py FLASK_DEBUG=1 flask run

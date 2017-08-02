@@ -99,6 +99,11 @@ character_df.index.names = ['Name']
 character_df = character_df.reset_index()
 ```
 
+### Extend dictionary cell to columns
+``` python
+df = pd.concat([df.drop(['meta'], axis=1), df['meta'].apply(pd.Series)], axis=1)
+```
+
 ## Find data
 ### Describe the data
 ``` python
