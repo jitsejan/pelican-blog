@@ -50,8 +50,8 @@ LINKEDIN_USERNAME = 'jitsejan'
 SPOTIFY_USERNAME = 'jitsejan'
 TWITTER_USERNAME = 'jqadrad'
 BITBUCKET_USERNAME = 'jitsejan'
-GITHUB_USERNAME = 'jqadrad'
-BLOCKS_USERNAME = 'jqadrad'
+GITHUB_USERNAME = 'jitsejan'
+BLOCKS_USERNAME = 'jitsejan'
 
 TYPOGRIFY = False
 PAGE_PATHS = ['pages']
