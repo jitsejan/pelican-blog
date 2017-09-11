@@ -1,0 +1,9 @@
+version: '2'
+services:
+  anaconda:
+    image: jitsejan/pelican-python3
+    volumes:
+      - .:/code
+    ports:
+      - "5006:5006"
+
