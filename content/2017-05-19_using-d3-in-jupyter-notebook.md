@@ -1,0 +1,12 @@
+Title: Using D3.js in Jupyter notebook
+Date: 2017-05-19 15:21
+Modified: 2017-05-19 15:21
+Category: posts
+Tags: notebook, Python, Jupyter, D3.js, graph, Javascript
+Slug: using-d3-in-jupyter-notebook
+Authors: Jitse-Jan
+Summary: A short description how to use D3.js in a Jupyter notebook.
+
+{% notebook d3_in_notebook.ipynb %}
+
+<center><img src="images/d3_chart.png" /></center>
