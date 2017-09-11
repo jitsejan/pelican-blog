@@ -2,8 +2,9 @@ version: '2'
 services:
   anaconda:
     image: jitsejan/pelican-python3
+    command: fab reserve
     volumes:
       - .:/code
     ports:
-      - "5006:5006"
+      - "8093:8093"
 
