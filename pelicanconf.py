@@ -52,6 +52,7 @@ TWITTER_USERNAME = 'jitsejan'
 BITBUCKET_USERNAME = 'jitsejan'
 GITHUB_USERNAME = 'jitsejan'
 BLOCKS_USERNAME = 'jitsejan'
+DOCKER_USERNAME = 'jitsejan'
 
 TYPOGRIFY = False
 PAGE_PATHS = ['pages']

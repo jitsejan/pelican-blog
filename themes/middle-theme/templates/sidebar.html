@@ -56,6 +56,9 @@
                 {% if BLOCKS_USERNAME %}
                     <li><a href="http://bl.ocks.org/{{ BLOCKS_USERNAME }}" title="Blocks.org" rel="me" target="new"><i class="fa fa-1x fa-bar-chart"></i></a></li>
                 {% endif %}
+                {% if DOCKER_USERNAME %}
+                    <li><a href="https://hub.docker.com/r/{{ DOCKER_USERNAME }}" title="Docker" rel="me" target="new"><i class="fa fa-1x fa-docker"></i></a></li>
+                {% endif %}
             </ul>
         </div>
     </div>
