@@ -1,4 +1,4 @@
-title: Hadoop Experiment - Spark with Pyspark in a Jupyter notebook
+title: Hadoop Experiment - Using Pig
 Date: 2017-10-03 09:36
 Modified: 2017-10-03 09:36
 Category: posts
