@@ -1,6 +1,6 @@
 version: '2'
 services:
-  anaconda:
+  pelican:
     image: jitsejan/pelican-python3
     command: fab reserve
     volumes:
