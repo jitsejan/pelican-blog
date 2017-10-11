@@ -5,7 +5,9 @@ Category: posts
 Tags: Hadoop, Hortonworks, Docker, container, virtualization
 Slug: getting-started-with-hortonworks-sandbox
 Authors: Jitse-Jan
-Summary: Using the Docker HDP image from [Hortonworks](https://hortonworks.com/downloads/#sandbox), it is easy to spin up an Hadoop environment onto your machine. 
+Summary: Using the Docker HDP image from [Hortonworks](https://hortonworks.com/downloads/#sandbox), it is easy to spin up an Hadoop environment onto your machine.
+
+<center><img src="https://cdn.datafloq.com/vendor/logo/Hortonworks-logo.png" height=80/></center>
 
 Download the HDP Docker image from Hortonworks.
 ```shell

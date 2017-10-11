@@ -5,8 +5,9 @@ Category: posts
 Tags: Hadoop, Spark, Docker, container, mapreduce, Python
 Slug: hadoop-experiment-spark-with-pyspark-in-jupyter
 Authors: Jitse-Jan
-Summary: Last time I started to experiment with Hadoop and simple scripts using MapReduce and Pig on a Cloudera Docker container. Now lets start playing with Spark, since this is the goto language for machine learning on Hadoop. 
+Summary: Last time I started to experiment with Hadoop and simple scripts using MapReduce and Pig on a Cloudera Docker container. Now lets start playing with Spark, since this is the goto language for machine learning on Hadoop.
 
+<center><img src="https://spark.apache.org/docs/0.9.0/img/spark-logo-hd.png" height=80 /></center>
 ### Docker setup
 I will use the [Docker image](https://hub.docker.com/r/jupyter/pyspark-notebook/) from Jupyter. It contains Spark and Jupyter and makes developing and testing pyspark very easy. The Dockerfile will retrieve the Jupyter pyspark notebook image, add the Python requirements file and install the dependencies. It will start the Notebook server using Jupyter Lab on the given port. The resulting image can be found on my [Docker repo](https://hub.docker.com/r/jitsejan/pyspark/).
 ```

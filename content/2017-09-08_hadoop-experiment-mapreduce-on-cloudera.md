@@ -7,6 +7,8 @@ Slug: hadoop-experiment-mapreduce-on-cloudera
 Authors: Jitse-Jan
 Summary: This post describes my first experiment with the Cloudera environment by trying to use the basic MapReduce method on a simple dataset.
 
+<center><img src="http://community.cloudera.com/html/assets/cloudera-logo.png" width=100/></center>
+
 In this example I will extract data with NES reviews from http://videogamecritic.com. I will create a dataframe, add some extra fields and save the data to a CSV-file. This file will be used for a simple MapReduce script.
 
 Note: I have a Docker container running with Selenium instead of installing all dependencies on my system. See [this page](https://hub.docker.com/r/selenium/standalone-chrome/).
