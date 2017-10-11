@@ -2,7 +2,7 @@ Title: Using Vue.js in a Jupyter notebook
 Date: 2017-10-05 22:47
 Modified: 2017-10-11 22:48
 Category: posts
-Tags: Truffle, Docker, container, dapp, Ethereum, blockchain
+Tags: Jupyter, notebook, VueJS, JavaScript, frontend
 Slug: using-vuejs-in-jupyter-notebook
 Authors: Jitse-Jan
 Summary: Another experiment: using the progressive JavaScript Framework [Vue.js](https://vuejs.org) in a Jupyter notebook. 
