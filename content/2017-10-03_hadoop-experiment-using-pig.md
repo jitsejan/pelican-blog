@@ -8,6 +8,7 @@ Authors: Jitse-Jan
 Summary: In my previous posts I have already shown simple examples of using MapReduce and Spark with Pyspark. A missing piece moving from MapReduce to Spark is the usage of Pig scripts. This posts shows an example howto use a Pig script.
 
 <center><img src="https://mapr.com/products/product-overview/apache-pig/assets/pig-image.png" height=80/></center>
+
 ## Pig
 Using the [Pig language](https://pig.apache.org/docs/r0.7.0/piglatin_ref2.html), we can make a script to perform the MapReduce actions similar to the [previous post](http://jitsejan.com/hadoop-experiment-mapreduce-on-cloudera.html). Note that I will be using the same CSV file as before.
 
