@@ -7,14 +7,20 @@ Slug: using-vuejs-in-jupyter-notebook
 Authors: Jitse-Jan
 Summary: Another experiment: using the progressive JavaScript Framework [Vue.js](https://vuejs.org) in a Jupyter notebook. 
 
-<div style="margin: 0px auto; width: 600px;">
-<img src="http://www.canadastop100.com/national/images/ct2017_english.png" style="float: left; height: 100px; margin-top: 10px;"/>
-<img src="https://cdn4.iconfinder.com/data/icons/wirecons-free-vector-icons/32/add-128.png" style="float: left; margin: 25px; height: 50px;"/>
-<img src="https://freepythontips.files.wordpress.com/2013/07/python_logo_notext.png" style="float: left; height: 100px;"/>
-<img src="https://cdn4.iconfinder.com/data/icons/wirecons-free-vector-icons/32/add-128.png" style="float: left; margin: 25px; height: 50px;"/>
-<img src="https://vuejs.org/images/logo.png" style="float: left; height: 100px; margin-top: 10px;"/>
+<style>
+img.header{
+  height: 10%;
+  margin-top: 10px;
+}
+</style>
+<div class="row">
+  <div class="col-md-2 col-xs-2 col-sm-2 col-sm-offset-1 col-xs-offset-1 col-md-offset-1"><img class="img-responsive" src="http://www.canadastop100.com/national/images/ct2017_english.png"/></div>
+  <div class="col-md-2 col-xs-2 col-sm-2"><img class="img-responsive" src="https://cdn4.iconfinder.com/data/icons/wirecons-free-vector-icons/32/add-128.png"/></div>
+  <div class="col-md-2 col-xs-2 col-sm-2"><img class="img-responsive" src="https://freepythontips.files.wordpress.com/2013/07/python_logo_notext.png"/></div>
+  <div class="col-md-2 col-xs-2 col-sm-2"><img class="img-responsive" src="https://cdn4.iconfinder.com/data/icons/wirecons-free-vector-icons/32/add-128.png "/></div>
+  <div class="col-md-2 col-xs-2 col-sm-2"><img class="img-responsive" src="https://vuejs.org/images/logo.png"/></div>
+</center>
 </div>
-<div style="clear: both;"></div>
 
 ## Objectives
 * Generate data using webcrawling with requests from [Canada's Top 100](http://www.canadastop100.com)
@@ -120,7 +126,7 @@ df.head()
 
 
 
-<div>
+<div class="row">
 <style>
     .dataframe thead tr:only-child th {
         text-align: right;
@@ -134,7 +140,7 @@ df.head()
         vertical-align: top;
     }
 </style>
-<table border="1" class="dataframe">
+<table border="1" class="dataframe table table-responsive">
   <thead>
     <tr style="text-align: right;">
       <th></th>
@@ -249,7 +255,7 @@ df.head()
         vertical-align: top;
     }
 </style>
-<table border="1" class="dataframe">
+<table border="1" class="dataframe table table-responsive">
   <thead>
     <tr style="text-align: right;">
       <th>title</th>
@@ -654,7 +660,6 @@ table.canada th.active .arrow {
 }
 </style>
 
-The result can also be seen on the [jsfiddle](https://jsfiddle.net/jitsejan/rxxjhgf6) that I have created. The notebook can be found on my [Github](https://github.com/jitsejan/notebooks/blob/master/notebooks/Project%20-%20Using%20JavaScript%20%26%20VueJS.ipynb) and the final result is shown on [this](http://vue.jitsejan.com/grid-example-01/) page.
+The result can also be tested on the [jsfiddle](https://jsfiddle.net/jitsejan/rxxjhgf6) that I have created. The source for the page can be found in my [Vue](https://github.com/jitsejan/vuejs/tree/master/grid-example-01) repository and is visible on my [bl.ocks.org](https://bl.ocks.org/jitsejan/ccf44862b5e90e67c689858c63016bd1).  The notebook can be found on my [Github](https://github.com/jitsejan/notebooks/blob/master/notebooks/Project%20-%20Using%20JavaScript%20%26%20VueJS.ipynb) and the final result is shown on [this](http://vue.jitsejan.com/grid-example-01/) page.
 
-
-
+<iframe width="100%" height="400" src="//jsfiddle.net/jitsejan/rxxjhgf6/embedded/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
