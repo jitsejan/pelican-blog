@@ -118,3 +118,12 @@ pickle.dump( colors, open( "colors.p", "wb" ) )
 saved_colors = pickle.load( open( "colors.p", "rb" ) )
 saved_colors
 ```
+
+## Filter
+A simple trick to select columns from a dataframe:
+```python
+# Create the filter condition
+condition = lambda col: col not in DESIRED_COLUMNS
+# Filter the dataframe
+filtered_df = df.drop(*filter(condition, df.columns))
+```
