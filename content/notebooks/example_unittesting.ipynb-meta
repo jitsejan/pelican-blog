@@ -6,5 +6,3 @@ Tags: notebook, unittest, Python, Jupyter
 Slug: unittesting-in-jupyter-notebook
 Authors: Jitse-Jan
 Summary: Unittesting in a Jupyter notebook
-
-{% notebook example_unittesting.ipynb %}

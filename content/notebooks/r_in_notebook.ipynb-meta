@@ -6,5 +6,3 @@ Tags: notebook, R, Python, Jupyter
 Slug: r-in-notebook
 Authors: Jitse-Jan
 Summary: A simple description how to use R and Python to interact in a Jupyter notebook.
-
-{% notebook r_in_notebook.ipynb %}

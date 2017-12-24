@@ -36,7 +36,7 @@ DEFAULT_PAGINATION = 10
 RELATIVE_URLS = True
 THEME = 'themes/middle-theme'
 PLUGIN_PATHS = ['plugins']
-PLUGINS = ['liquid_tags.notebook', 'liquid_tags.literal', 'assets', "tag_cloud", 'tipue_search']
+PLUGINS = ['liquid_tags.literal', 'assets', "tag_cloud", 'tipue_search', 'ipynb.markup']
 
 DELETE_OUTPUT_DIRECTORY = False
 EXTRA_HEADER = open('_nb_header.html').read() if os.path.exists('_nb_header.html') else None
@@ -84,3 +84,5 @@ TAG_CLOUD_BADGE = False	        # Optional setting : can bring badges, which mea
 
 TIPUE_SEARCH = True
 DIRECT_TEMPLATES = (('index', 'tags', 'categories', 'authors', 'archives', 'search'))
+
+MARKUP = ('md', 'ipynb')

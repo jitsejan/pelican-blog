@@ -6,5 +6,3 @@ Tags: notebook, nltk, Python, Jupyter, machinelearning
 Slug: nltk-first-experiments
 Authors: Jitse-Jan
 Summary: My first experiment using the NLTK library of Python
-
-{% notebook nltk_firsttry.ipynb %}
