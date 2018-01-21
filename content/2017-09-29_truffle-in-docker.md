@@ -14,9 +14,9 @@ img.header{
 }
 </style>
 <center>
-<img class="header" src="https://truffle.readthedocs.io/en/beta/img/logo.png" />
+<img class="header" src="http://files.jitsejan.com/logos/truffle.PNG" />
 <img class="header" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Tab_plus.svg/2000px-Tab_plus.svg.png" />
-<img class="header" src="https://onehundred15.files.wordpress.com/2015/11/docker-logo2.png" />
+<img class="header" src="http://files.jitsejan.com/logos/docker.PNG" />
 </center>
 ## Introduction
 In my [earlier post](http://www.jitsejan.com/creating-dapp-with-truffle-and-metamask.html) about creating a decentralized application using Truffle and Metamask I used my own machine to install all dependencies and start developing. Since I am switching to Docker for most of my projects because of the flexibility, reproducability and safety of containerized environments, I also convert the Truffle project to Docker. As an inspiration I studied the [example](https://github.com/dougvk/truffle3-frontend-example) made by Douglas von Kohorn.
