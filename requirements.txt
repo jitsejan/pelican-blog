@@ -1,7 +1,0 @@
-BeautifulSoup4
-fabric3
-ipython
-markdown
-pelican
-webassets
-nbconvert
